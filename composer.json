@@ -1,0 +1,49 @@
+{
+    "name": "hexlet/code",
+    "bin": [
+        "bin/php-package"
+    ],
+    "type": "project",
+    "authors": [
+        {
+            "name": "Nikita Krochak",
+            "email": "krochak_n@mail.ru"
+        }
+    ],
+    "description": "Page Loader",
+    "license": "MIT",
+    "scripts": {
+        "test": "phpunit tests"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hexlet\\PageLoader\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hexlet\\PageLoader\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "psy/psysh": "@stable",
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.6",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-phpunit": "^0.12.22",
+        "phpstan/phpstan": "^0.12.98"
+    },
+    "require": {
+        "php": "^8.0",
+        "docopt/docopt": "^1.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/support": "^8.60"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "beta"
+}
