@@ -22,7 +22,7 @@ final class Cli
     Options:
         -h --help                     Show this screen
         -v --version                  Show version
-        --output -o <directory>       Output directory [default: /var/tmp]
+        --output -o <directory>       Output directory [default: .]
 
     DOC;
 

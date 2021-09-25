@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Hexlet\PageLoader\Tests;
 
+use DiDom\Document;
+use DiDom\Element;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
@@ -22,8 +24,9 @@ class PageLoaderTest extends TestCase
 {
     private const TEMP_FILES_DIRECTORY = 'tmp';
     private const TEST_SITE_URL = 'https://ru.hexlet.io/';
-    private const TEST_SITE_FIXTURE_NAME = 'ru.hexlet.io';
-    private const TEST_SITE_RESULT_FILENAME = 'ru-hexlet-io.html';
+    private const TEST_SITE_ORIGINAL = 'ru-hexlet-io-original.html';
+    private const TEST_SITE_FIXTURE = 'ru-hexlet-io.html';
+    private const TEST_SITE_FILES_DIRECTORY = 'ru-hexlet-io_files';
 
     private string $path;
     private vfsStreamDirectory $directory;
@@ -44,17 +47,17 @@ class PageLoaderTest extends TestCase
 
     public function testPageDownloadSuccess(): void
     {
-        $expectedContent = $this->getFixtureContent(self::TEST_SITE_FIXTURE_NAME);
+        $this->mockPage();
 
-        $this->addMockAnswer($expectedContent);
-
-        $this->assertFalse($this->directory->hasChildren());
+        $this->assertFalse($this->directory->hasChild(self::TEST_SITE_FIXTURE));
 
         PageLoader::download(self::TEST_SITE_URL, $this->path, $this->client);
 
-        $this->assertTrue($this->directory->hasChildren());
-        $this->assertTrue($this->directory->hasChild(self::TEST_SITE_RESULT_FILENAME));
-        $this->assertStringEqualsFile($this->directory->getChild(self::TEST_SITE_RESULT_FILENAME)->url(), $expectedContent);
+        $this->assertTrue($this->directory->hasChild(self::TEST_SITE_FIXTURE));
+
+        $expected = FileUtils::get(self::getFixtureFullPath(self::TEST_SITE_FIXTURE));
+        $actual = FileUtils::get($this->directory->getChild(self::TEST_SITE_FIXTURE)->url());
+        $this->assertEquals(str_replace(PHP_EOL, '', $expected), str_replace(PHP_EOL, '', $actual));
     }
 
     public function testPageDownloadIncorrectDirectoryError(): void
@@ -81,21 +84,53 @@ class PageLoaderTest extends TestCase
         return [[400], [401], [403], [404], [500], [502], [503]];
     }
 
-    private function getFixtureContent(string $fixtureName): string
+    /**
+     * @param string ...$fixturePath
+     */
+    private static function getFixtureFullPath(...$fixturePath): string
     {
-        $parts = [__DIR__, 'fixtures', $fixtureName];
+        $parts = [__DIR__, 'fixtures', ...$fixturePath];
         $path = realpath(implode('/', $parts));
 
         if ($path) {
-            return FileUtils::get($path);
+            return $path;
         }
 
         throw new RuntimeException();
+    }
+
+    /**
+     * @param string ...$fixturePath
+     */
+    private function getFixtureContent(...$fixturePath): string
+    {
+        return FileUtils::get(self::getFixtureFullPath(...$fixturePath));
     }
 
     private function addMockAnswer(?string $content, int $responseCode = 200): void
     {
         $response = new Response($responseCode, [], $content);
         $this->mock->append($response);
+    }
+
+    private function mockPage(): void
+    {
+        $originalPageContent = $this->getFixtureContent(self::TEST_SITE_ORIGINAL);
+
+        $this->addMockAnswer($originalPageContent);
+        $this->mockImages($originalPageContent);
+    }
+
+    private function mockImages(string $pageContent): void
+    {
+        collect((new Document($pageContent))->find('img'))->map(function (Element $element) {
+            $src = $element->getAttribute('src');
+            if ($src) {
+                $fileName = basename($src);
+                $content = $this->getFixtureContent(self::TEST_SITE_FILES_DIRECTORY, $fileName);
+                $this->addMockAnswer($content);
+            }
+            return $element;
+        });
     }
 }
