@@ -38,7 +38,8 @@
         "php": "^8.0",
         "docopt/docopt": "^1.0",
         "guzzlehttp/guzzle": "^7.3",
-        "illuminate/support": "^8.60"
+        "illuminate/support": "^8.60",
+        "mikey179/vfsstream": "^1.6"
     },
     "config": {
         "optimize-autoloader": true,
