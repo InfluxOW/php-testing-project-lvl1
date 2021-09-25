@@ -15,13 +15,17 @@ use RuntimeException;
 class PageLoader
 {
     /**
-     * @param \Hexlet\PageLoader\Http\ClientInterface $client
+     * @param \Hexlet\PageLoader\Http\ClientInterface|string $client
      * Workaround for Hexlet tests
      *
      * @throws ClientExceptionInterface | RuntimeException
      */
-    public static function download(string $url, string $rootDirectory, ClientInterface $client): string
+    public static function download(string $url, string $rootDirectory, ClientInterface|string $client): string
     {
+        if (is_string($client)) {
+            $client = new $client();
+        }
+
         $content = $client->get($url)->getBody()->getContents();
         $document = new Document($content);
 
@@ -40,7 +44,7 @@ class PageLoader
         return "{$filename}{$postfix}";
     }
 
-    private static function downloadImages(Document $document, string $rootUrl, string $rootDirectory, string $directory, ClientInterface $client): void
+    private static function downloadImages(Document $document, string $rootUrl, string $rootDirectory, string $directory, mixed $client): void
     {
         collect($document->find('img'))->map(function (Element $element) use ($client, $directory, $rootUrl, $rootDirectory) {
             $src = $element->getAttribute('src');

@@ -16,6 +16,9 @@
         "test": "phpunit tests"
     },
     "autoload": {
+        "files": [
+            "downloader/Downloader.php"
+        ],
         "psr-4": {
             "Hexlet\\PageLoader\\": "src/"
         }
