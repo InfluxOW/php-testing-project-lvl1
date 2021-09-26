@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang='ru' prefix='og: https://ogp.me/ns#'>
+<head>
+<title>Профессия &quot;PHP-программист&quot;, обучение с нуля за 8 месяцев</title>
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="Iw_oKGnO2MfNH2e3pSWdSIVI1LNlOq9t45A1D4Qp_ztRIGuP1MEcnLjvJVF2ggndU9v9zjQ6NW4-wtQ8S3opyA" />
+<meta name="csp-nonce" />
+<link rel="shortcut icon" type="image/x-icon" href="https://cdn2.hexlet.io/assets/favicon-2c49cf49c44e5388df35976abd2eb9ce820e722edfe2e6604f1fe357e2f940da.ico" />
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta charset='utf-8'>
+<meta content='IE=Edge' http-equiv='X-UA-Compatible'>
+<meta content='b9d3902d34' name='verify-admitad'>
+
+<script>
+//<![CDATA[
+window.gon={};gon.fired_events={};gon.is_bot=false;gon.applications={};gon.current_user={"id":null,"email":null,"username":null,"created_at":"2021-09-26T09:29:09.209Z","last_viewed_notification_id":null,"paid_days_count":0,"full_name":"","text":" ()","is_guest":true,"is_mentor":false,"is_tutor":false,"is_hexlet_employee":false,"current_company":null,"can_use_paid_features":false,"current_program":null,"is_active_group_member":false};gon.token="ynA2wD9HdEs3hX5DM0lFH0Zuc1KrFpxHvZGmMmZTT624X7VngkiwEEJ1PKXg7tGKkP1aL_oWBkRgw0cBqQCZXg";gon.events=["signed_up","lead_created","company_created","product_payment_paid","subscription_paid","test","show_lead_modal","exercise_started"];gon.disqus_name="hexletio";gon.locale="ru";gon.rails_env="production";gon.mobile=false;gon.google={"analytics_key":"UA-1360700-51","optimize_key":"GTM-5QDVFPF"};gon.social_signin=false;gon.typoreporter_google_form_id="1FAIpQLSeibfGq-KvWQ2Fyru-zkFFRVTLBuzXAHAoEyN1p49FtDmNoNA";
+//]]>
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Hexlet","url":"https://hexlet.io","sameAs":["https://www.facebook.com/Hexlet","https://www.youtube.com/user/HexletUniversity","https://twitter.com/HexletHQ","https://soundcloud.com/hexlet"],"legalName":"Hexlet Ltd.","address":"UMA Esplanadi, Pohjoisesplanadi 39, 00100 Helsinki, Finland","vatID":"VAT ID: FI26641607","telephone":"+7 495 147 73 79","logo":{"@type":"ImageObject","url":"https://cdn2.hexlet.io/assets/hexlet_logo-e99fc2b3b7c1eec88899f3af1435a39aaac6fd29d011dfe2342499c0884b7a96.png"}}</script>
+
+<script>
+  window.EventsMapping = {
+    on: function(eventName, callback) {
+      if (gon.events.indexOf(eventName) === -1) {
+        throw new Error('Undefined event name ' + eventName + '. Check gon.events.');
+      }
+  
+      if (!gon.fired_events.hasOwnProperty(eventName)) {
+        return;
+      }
+      var options = gon.fired_events[eventName];
+  
+      callback(eventName, options);
+    }
+  };
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WK88TH');
+</script>
+
+<script>
+  var _rollbarConfig = {
+    accessToken: "fc27636027d0460bbc1578d97d0d27ad",
+    captureUncaught: true,
+    captureUnhandledRejections: true,
+    payload: {
+      person: gon.current_user,
+      environment: "production",
+      client: {
+        code_version: "v5979",
+        guess_uncaught_frames: true,
+      },
+    },
+  };
+  
+  // Rollbar Snippet
+  !function(r){var e={};function o(n){if(e[n])return e[n].exports;var t=e[n]={i:n,l:!1,exports:{}};return r[n].call(t.exports,t,t.exports,o),t.l=!0,t.exports}o.m=r,o.c=e,o.d=function(r,e,n){o.o(r,e)||Object.defineProperty(r,e,{enumerable:!0,get:n})},o.r=function(r){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})},o.t=function(r,e){if(1&e&&(r=o(r)),8&e)return r;if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var t in r)o.d(n,t,function(e){return r[e]}.bind(null,t));return n},o.n=function(r){var e=r&&r.__esModule?function(){return r.default}:function(){return r};return o.d(e,"a",e),e},o.o=function(r,e){return Object.prototype.hasOwnProperty.call(r,e)},o.p="",o(o.s=0)}([function(r,e,o){"use strict";var n=o(1),t=o(5);_rollbarConfig=_rollbarConfig||{},_rollbarConfig.rollbarJsUrl=_rollbarConfig.rollbarJsUrl||"https://cdn.rollbar.com/rollbarjs/refs/tags/v2.23.0/rollbar.min.js",_rollbarConfig.async=void 0===_rollbarConfig.async||_rollbarConfig.async;var a=n.setupShim(window,_rollbarConfig),l=t(_rollbarConfig);window.rollbar=n.Rollbar,a.loadFull(window,document,!_rollbarConfig.async,_rollbarConfig,l)},function(r,e,o){"use strict";var n=o(2),t=o(3);function a(r){return function(){try{return r.apply(this,arguments)}catch(r){try{console.error("[Rollbar]: Internal error",r)}catch(r){}}}}var l=0;function i(r,e){this.options=r,this._rollbarOldOnError=null;var o=l++;this.shimId=function(){return o},"undefined"!=typeof window&&window._rollbarShims&&(window._rollbarShims[o]={handler:e,messages:[]})}var s=o(4),d=function(r,e){return new i(r,e)},c=function(r){return new s(d,r)};function u(r){return a((function(){var e=this,o=Array.prototype.slice.call(arguments,0),n={shim:e,method:r,args:o,ts:new Date};window._rollbarShims[this.shimId()].messages.push(n)}))}i.prototype.loadFull=function(r,e,o,n,t){var l=!1,i=e.createElement("script"),s=e.getElementsByTagName("script")[0],d=s.parentNode;i.crossOrigin="",i.src=n.rollbarJsUrl,o||(i.async=!0),i.onload=i.onreadystatechange=a((function(){if(!(l||this.readyState&&"loaded"!==this.readyState&&"complete"!==this.readyState)){i.onload=i.onreadystatechange=null;try{d.removeChild(i)}catch(r){}l=!0,function(){var e;if(void 0===r._rollbarDidLoad){e=new Error("rollbar.js did not load");for(var o,n,a,l,i=0;o=r._rollbarShims[i++];)for(o=o.messages||[];n=o.shift();)for(a=n.args||[],i=0;i<a.length;++i)if("function"==typeof(l=a[i])){l(e);break}}"function"==typeof t&&t(e)}()}})),d.insertBefore(i,s)},i.prototype.wrap=function(r,e,o){try{var n;if(n="function"==typeof e?e:function(){return e||{}},"function"!=typeof r)return r;if(r._isWrap)return r;if(!r._rollbar_wrapped&&(r._rollbar_wrapped=function(){o&&"function"==typeof o&&o.apply(this,arguments);try{return r.apply(this,arguments)}catch(o){var e=o;throw e&&("string"==typeof e&&(e=new String(e)),e._rollbarContext=n()||{},e._rollbarContext._wrappedSource=r.toString(),window._rollbarWrappedError=e),e}},r._rollbar_wrapped._isWrap=!0,r.hasOwnProperty))for(var t in r)r.hasOwnProperty(t)&&(r._rollbar_wrapped[t]=r[t]);return r._rollbar_wrapped}catch(e){return r}};for(var p="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","),f=0;f<p.length;++f)i.prototype[p[f]]=u(p[f]);r.exports={setupShim:function(r,e){if(r){var o=e.globalAlias||"Rollbar";if("object"==typeof r[o])return r[o];r._rollbarShims={},r._rollbarWrappedError=null;var l=new c(e);return a((function(){e.captureUncaught&&(l._rollbarOldOnError=r.onerror,n.captureUncaughtExceptions(r,l,!0),e.wrapGlobalEventHandlers&&t(r,l,!0)),e.captureUnhandledRejections&&n.captureUnhandledRejections(r,l,!0);var a=e.autoInstrument;return!1!==e.enabled&&(void 0===a||!0===a||"object"==typeof a&&a.network)&&r.addEventListener&&(r.addEventListener("load",l.captureLoad.bind(l)),r.addEventListener("DOMContentLoaded",l.captureDomContentLoaded.bind(l))),r[o]=l,l}))()}},Rollbar:c}},function(r,e,o){"use strict";function n(r,e,o,n){r._rollbarWrappedError&&(n[4]||(n[4]=r._rollbarWrappedError),n[5]||(n[5]=r._rollbarWrappedError._rollbarContext),r._rollbarWrappedError=null);var t=e.handleUncaughtException.apply(e,n);o&&o.apply(r,n),"anonymous"===t&&(e.anonymousErrorsPending+=1)}r.exports={captureUncaughtExceptions:function(r,e,o){if(r){var t;if("function"==typeof e._rollbarOldOnError)t=e._rollbarOldOnError;else if(r.onerror){for(t=r.onerror;t._rollbarOldOnError;)t=t._rollbarOldOnError;e._rollbarOldOnError=t}e.handleAnonymousErrors();var a=function(){var o=Array.prototype.slice.call(arguments,0);n(r,e,t,o)};o&&(a._rollbarOldOnError=t),r.onerror=a}},captureUnhandledRejections:function(r,e,o){if(r){"function"==typeof r._rollbarURH&&r._rollbarURH.belongsToShim&&r.removeEventListener("unhandledrejection",r._rollbarURH);var n=function(r){var o,n,t;try{o=r.reason}catch(r){o=void 0}try{n=r.promise}catch(r){n="[unhandledrejection] error getting `promise` from event"}try{t=r.detail,!o&&t&&(o=t.reason,n=t.promise)}catch(r){}o||(o="[unhandledrejection] error getting `reason` from event"),e&&e.handleUnhandledRejection&&e.handleUnhandledRejection(o,n)};n.belongsToShim=o,r._rollbarURH=n,r.addEventListener("unhandledrejection",n)}}}},function(r,e,o){"use strict";function n(r,e,o){if(e.hasOwnProperty&&e.hasOwnProperty("addEventListener")){for(var n=e.addEventListener;n._rollbarOldAdd&&n.belongsToShim;)n=n._rollbarOldAdd;var t=function(e,o,t){n.call(this,e,r.wrap(o),t)};t._rollbarOldAdd=n,t.belongsToShim=o,e.addEventListener=t;for(var a=e.removeEventListener;a._rollbarOldRemove&&a.belongsToShim;)a=a._rollbarOldRemove;var l=function(r,e,o){a.call(this,r,e&&e._rollbar_wrapped||e,o)};l._rollbarOldRemove=a,l.belongsToShim=o,e.removeEventListener=l}}r.exports=function(r,e,o){if(r){var t,a,l="EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(",");for(t=0;t<l.length;++t)r[a=l[t]]&&r[a].prototype&&n(e,r[a].prototype,o)}}},function(r,e,o){"use strict";function n(r,e){this.impl=r(e,this),this.options=e,function(r){for(var e=function(r){return function(){var e=Array.prototype.slice.call(arguments,0);if(this.impl[r])return this.impl[r].apply(this.impl,e)}},o="log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleAnonymousErrors,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","),n=0;n<o.length;n++)r[o[n]]=e(o[n])}(n.prototype)}n.prototype._swapAndProcessMessages=function(r,e){var o,n,t;for(this.impl=r(this.options);o=e.shift();)n=o.method,t=o.args,this[n]&&"function"==typeof this[n]&&("captureDomContentLoaded"===n||"captureLoad"===n?this[n].apply(this,[t[0],o.ts]):this[n].apply(this,t));return this},r.exports=n},function(r,e,o){"use strict";r.exports=function(r){return function(e){if(!e&&!window._rollbarInitialized){for(var o,n,t=(r=r||{}).globalAlias||"Rollbar",a=window.rollbar,l=function(r){return new a(r)},i=0;o=window._rollbarShims[i++];)n||(n=o.handler),o.handler._swapAndProcessMessages(l,o.messages);window[t]=n,window._rollbarInitialized=!0}}}}]);
+  // End Rollbar Snippet
+</script>
+
+<link rel="stylesheet" media="all" href="https://cdn2.hexlet.io/packs/css/5-a96b8f34.css" />
+<link rel="stylesheet" media="all" href="https://cdn2.hexlet.io/packs/css/application-90cfa38c.css" />
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://ru.hexlet.io/lessons.rss" />
+<meta content='website' property='og:type'>
+<meta content='Профессия &quot;PHP-программист&quot;, обучение с нуля за 8 месяцев' property='og:title'>
+<meta content='https://ru.hexlet.io/programs/php' property='og:url'>
+<link href='https://ru.hexlet.io/programs/php' rel='canonical'>
+<meta content='https://cdn2.hexlet.io/derivations/image/fill_png/1080/640/eyJpZCI6IjQ4YmExNmQ1MzE4YWIwYzU1ODVjNzg1YjBmNTEzMTM5LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=ac597b42ce44fa473601ca3f84863bd9f21b9420f83dea9d7d4fd12d38a4ee20' property='og:image'>
+<link href='https://cdn2.hexlet.io/derivations/image/fill_png/1080/640/eyJpZCI6IjQ4YmExNmQ1MzE4YWIwYzU1ODVjNzg1YjBmNTEzMTM5LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=ac597b42ce44fa473601ca3f84863bd9f21b9420f83dea9d7d4fd12d38a4ee20' rel='image_src'>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","productID":"php","name":"Профессия: PHP-разработчик","description":"Разрабатывает сайты на Laravel. Строит взаимодействие с внешними сервисами и программирует собственный API. Проектирует архитектуру базы данных, оптимизирует узкие места и обеспечивает бесперебойную работу. Хорошо разбирается в интернет-технологиях: HTML, HTTP, DNS.","url":"https://ru.hexlet.io/programs/php","image":"https://cdn2.hexlet.io/derivations/image/fill_png/1080/1080/eyJpZCI6IjQ4YmExNmQ1MzE4YWIwYzU1ODVjNzg1YjBmNTEzMTM5LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=1a5bfb8a8bbb731acd4124e9d6f379de69adb7d3a0d5dc600cd1c053de9d5733","brand":{"@context":"https://schema.org","@type":"Organization","name":"Hexlet","url":"https://hexlet.io","sameAs":["https://www.facebook.com/Hexlet","https://www.youtube.com/user/HexletUniversity","https://twitter.com/HexletHQ","https://soundcloud.com/hexlet"],"legalName":"Hexlet Ltd.","address":"UMA Esplanadi, Pohjoisesplanadi 39, 00100 Helsinki, Finland","vatID":"VAT ID: FI26641607","telephone":"+7 495 147 73 79","logo":{"@type":"ImageObject","url":"https://cdn2.hexlet.io/assets/hexlet_logo-e99fc2b3b7c1eec88899f3af1435a39aaac6fd29d011dfe2342499c0884b7a96.png"}},"identifier_exists":"no","mpn":"","sku":"php","offers":{"@type":"Offer","price":98000,"priceCurrency":"rub","priceValidUntil":"2022-09-26","itemCondition":"https://schema.org/NewCondition","availability":"https://schema.org/OnlineOnly","url":"https://ru.hexlet.io/programs/php"}}</script>
+<meta content='Курсы обучения для PHP-программистов, уроки для начинающих с опытными наставниками. Получи востребованную в IT профессию &quot;PHP-программист&quot;, обучение онлайн' name='description'>
+<meta content='PHP-разработчик — Разрабатывает сайты на Laravel. Строит взаимодействие с внешними сервисами и программирует собственный API. Проектирует архитектуру базы да...' property='og:description'>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"У меня получится?","acceptedAnswer":{"@type":"Answer","text":"Хотели бы сказать, что да, точно получится, но не можем — не всё зависит от нас. Не можем и пообещать, что учиться будет легко — изучать новое всегда трудно.\n\nНо мы точно знаем, что наши курсы подходят для новичков, а [примеры наших выпускников](https://ru.hexlet.io/blog/categories/success) показывают, что можно с нуля освоить профессию программиста, найти работу и стать ценным специалистом. И, конечно, мы вам поможем.\n\nТак что попробовать точно стоит! А если сомневаетесь, просто оставьте заявку и пройдите несколько уроков из вводных курсов — сможете проверить и свой интерес к программированию, и качество наших материалов.\n"}},{"@type":"Question","name":"Чем вы отличаетесь от других школ?","acceptedAnswer":{"@type":"Answer","text":"Историей. Хекслет существует с 2012 года. Мы начинали, когда онлайн-образование еще не было столько популярным, и создали онлайн-тренажер, когда на EdTech вообще замахивались единицы. Сегодня Хекслет - это целое сообщество разработчиков.  Мы не просто учим, мы прививаем правильные инженерные практики и развиваем хорошую инженерную культуру.\n\nЭкспертизой. Хекслет создается и развивается программистами, мы даем то, что знаем сами, в чем хорошо разбираемся. Программирование — наш единственный фокус.\n\nОтношением к трудоустройству. Мы не обещаем его как другие. При этом студенты Хекслета получают оффер еще во время обучения, а некоторые работодатели указывают курсы Хекслета как преимущество при найме. Как такое возможно? Просто в процессе обучения мы прорабатываем те моменты, которые не оставляют шансов остаться без работы: мощные проекты, Open Source для командной практики и масса образовательных вебинаров по развитию карьеры.\n"}},{"@type":"Question","name":"Сколько времени занимает учёба?","acceptedAnswer":{"@type":"Answer","text":"Мы рекомендуем выделять 10–15 часов в неделю, тогда получится закончить все курсы и выполнить все проекты в профессии за 8 месяцев.\n\nКонечно, это приблизительная оценка. Если у студента уже есть знания по программированию, получится справляться с задачами быстрее, а у новичков может уходить больше времени.\n"}},{"@type":"Question","name":"Как начать обучение?","acceptedAnswer":{"@type":"Answer","text":"Достаточно просто зарегистрироваться, сразу после регистрации вам будут доступны первые курсы профессии. Проходите их бесплатно, чтобы понять, как устроено обучение на Хекслете и подходит ли оно вам.\n\nНабор в группы открыт круглый год. Вы можете начать в любой день — просто оставьте заявку. После оплаты куратор добавит вас группу, где вы сможете общаться с другими студентами, задавать вопросы наставнику и участвовать в дополнительных мероприятиях.\n"}},{"@type":"Question","name":"Как проходит обучение?","acceptedAnswer":{"@type":"Answer","text":"Вы будете учиться в группе вместе с другими студентами.\n\nЧасть материала — это курсы с адаптированной для новичков теорией, тестами на закрепление и большим количеством практических упражнений с автоматизированной проверкой прямо в браузере. Курсы каждый студент проходит самостоятельно, а если нужно, обращается за помощью к наставнику и одногруппникам.\n\nЕще одна часть обучения — мероприятия, которые проводит наставник: лекции, вебинары, слаконары, лайв-кодинг. Лучше присутствовать на них лично, чтобы сразу задать вопросы, но если не получается, не страшно — мы сохраняем все записи.\n\nА чтобы закрепить новые знания и получить опыт реальной разработки, за время обучения вы создадите настоящие приложения, которые станут частью вашего портфолио.\n\nТакже вы можете учиться по готовым курсам и выполнять проекты самостоятельно или [вместе с наставником](https://premium.hexlet.io/) в индивидуальном формате.\n"}},{"@type":"Question","name":"Кто такой наставник?","acceptedAnswer":{"@type":"Answer","text":"Каждый наставник — опытный программист, который добился успехов в профессии, а теперь делится знаниями и опытом со студентами Хекслета. Кандидаты проходят строгий отбор — наставником становится лишь каждый десятый, поэтому случайных людей у нас нет.\n\nНаставник отвечает на вопросы по курсам и проектам и в целом по выбранной профессии, а если возникнут трудности, он поддержит и поможет разобраться.\n\nСтуденты общаются с наставником в закрытом Slack-чате группы, а также на регулярных групповых созвонах, вебинарах и сессиях лайв-кодинга.\n"}},{"@type":"Question","name":"Как оплатить?","acceptedAnswer":{"@type":"Answer","text":"Мы принимаем карты Visa и MasterCard любого банка, валюта счёта тоже может быть любой.\n\nВы можете оплатить сразу весь срок обучения или платить помесячно. Помесячная оплата — это честная рассрочка от Хекслета, никаких банков, кредитов и процентов. Вы привязываете карту — мы списываем с неё деньги раз в месяц. Но если оплатить сразу, получится дешевле, так как мы дадим скидку.\n"}},{"@type":"Question","name":"Могу ли я вернуть деньги, если что-то пойдёт не так?","acceptedAnswer":{"@type":"Answer","text":"Да, мы гарантируем возврат всей суммы в течение 14 дней с начала обучения.\n"}}]}</script>
+
+</head>
+<body class='min-vh-100'>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WK88TH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class='container'>
+<header class='navbar navbar-light navbar-expand-lg border-bottom align-items-center py-lg-3 mb-4'>
+<a aria-hidden='true' class='navbar-brand link-dark' href='/'>
+<span class='fs-4 lh-1'>Хекслет</span>
+</a>
+<button aria-controls='navbar-responsive' aria-expanded='false' aria-label='&lt;span class=&quot;translation_missing&quot; title=&quot;translation missing: ru.layouts.main.header.toggle_navigation&quot;&gt;Toggle Navigation&lt;/span&gt;' class='navbar-toggler border-0' data-bs-target='#navbar-responsive' data-bs-toggle='collapse'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='navbar-collapse collapse' id='navbar-responsive'>
+<ul class='navbar-nav algin-items-start me-auto'>
+<li><a class="nav-link text-dark px-lg-3 " href="/programs">Программы обучения</a></li>
+<li><a class="nav-link text-dark px-lg-3 " href="/webinars">Бесплатно</a></li>
+<li><a class="nav-link text-dark px-lg-3 " href="/teams">Компаниям</a></li>
+</ul>
+<div class='col-auto text-lg-end py-2 py-lg-0'>
+<a class="btn btn-outline-secondary me-2" href="https://ru.hexlet.io/session/new">Вход</a>
+<a class="btn btn-outline-secondary" href="/u/new?from=https%3A%2F%2Fru.hexlet.io%2Fprograms%2Fphp">Регистрация</a>
+</div>
+</div>
+</header>
+</div>
+
+
+
+<main class='mb-5'>
+<section class='hexlet-section-gradient'>
+<div class='py-4 py-lg-5'>
+<div class='container py-md-5'>
+<div class='row justify-content-between'>
+<div class='col-lg-7 align-self-center'>
+<div class='mb-4'>
+<span class='h5 fw-light mb-0 mr-2'>Профессия</span>
+<h1 class='display-4'>PHP-разработчик</h1>
+</div>
+<p class='lead mb-4 pb-2'>
+С нуля до разработчика за 8 месяцев.
+Возвращаем деньги, если не удалось найти работу.
+Стартуем с 29 сентября
+</p>
+<a class="btn btn-primary btn-lg px-4" href="#enroll"><div class='text-start'>
+<div class='small'>Первые курсы в тренажере бесплатно</div>
+<span class='mr-1'>
+Запишитесь и начните практику
+</span>
+→
+</div>
+</a></div>
+<div class='col-lg-5 d-lg-flex align-items-start justify-content-center justify-content-lg-end d-none'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/540/320/eyJpZCI6IjQ4YmExNmQ1MzE4YWIwYzU1ODVjNzg1YjBmNTEzMTM5LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=462d3a48a0360daf78fb9e50a552f0e28163b597514bad9d32c21fd3f27730cb"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/540/320/eyJpZCI6IjQ4YmExNmQ1MzE4YWIwYzU1ODVjNzg1YjBmNTEzMTM5LnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=9aefd13737662b26a8d99fa945c2cd351b950560c5e58a8e21234cdb95915d2c"><img src="https://cdn2.hexlet.io/assets/professions/program-f26fba51e364abcd7f15475edb68d93958426d54c75468dc5bc65e493a586226.png" class="img-fluid" width="540" height="320" alt="Иконка программы PHP-разработчик"></picture>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='pt-5 pb-4 bg-hexlet-gray' id='employment'>
+<div class='container py-md-4 py-lg-5'>
+<div class='row'>
+<div class='col-md-6'>
+<h2 class='h1 mb-3'>Гарантированное трудоустройство?</h2>
+<p class='lead'>Мы не можем обещать гарантированную работу, но наш процесс обучения так спроектирован, что его невозможно «отсидеть» или «прослушать». Ваше обучение будет бесплатным, если вы не найдете работу после Хекслета.</p>
+<img class="img-fluid" src="https://cdn2.hexlet.io/assets/generic_promo_cover-ed03baf0da0dd1fd17e43d80f7954a83d2b7fa298fc694d1b2784319c44e078f.png" />
+</div>
+<div class='col-md-6'>
+<div class='mb-4'>
+<div class='mb-2'>
+<b>1. Практика</b>
+</div>
+<div class='mb-1'>
+Более <b>320</b> заданий в тренажере. <b>4</b> реальных проекта в портфолио. Разбор задач и вопросов с собеседований
+</div>
+</div>
+<div class='mb-4'>
+<div class='mb-2'>
+<b>2. Глубокая проработка тем</b>
+</div>
+<div class='mb-1'>
+Мы не сторонники подхода «повтори за учителем». На Хекслете решение задач идет только через реальное понимание
+</div>
+</div>
+<div class='mb-4'>
+<div class='mb-2'>
+<b>3. Наставники</b>
+</div>
+<div class='mb-1'>
+Наставники помогают скорректировать траекторию обучения и внимательно проверяют все домашние задания. Вам не будет стыдно за результат
+</div>
+</div>
+<div class='mb-4'>
+<div class='mb-2'>
+<b>4. Стажировка</b>
+</div>
+<div class='mb-1'>
+Участие в проектах с реальными пользователями. Полный цикл разработки в открытых проектах (исходный код доступен на Github)
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='py-5 bg-dark text-light' id='salary'>
+<div class='container py-lg-5'>
+<div class='row py-md-4'>
+<div class='col-lg-6 mb-4 mb-lg-0'>
+<h2>
+Сколько зарабатывает
+<span class='d-inline-block'>php-разработчик</span>
+</h2>
+<div class='mt-4'>
+Фактическая зарплата зависит от города и конкретной компании. Выйти на указанный уровень можно за год реальной разработки.
+</div>
+</div>
+<div class='col-lg-6'>
+<div class='d-flex'>
+<span class='fad fa-chart-pie fa-5x mt-3 mt-xl-4'></span>
+<div class='ml-3 ml-sm-4'>
+<div class='display-1 text-nowrap'>120 000₽</div>
+<div class='lead'>Медианная зарплата в России</div>
+<div class='text-muted small'>По результатам <a href="https://habr.com/ru/article/540718/" class="text-muted">исследования</a> Хабр Карьеры</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='container py-4 pt-lg-5 mt-4 mt-xl-5'>
+<h2 class='h1 mb-0'>Кому подойдёт обучение</h2>
+<div class='row mt-3 pt-md-3'>
+<div class='col-lg-7 col-xl-5 mt-3 mt-lg-0'>
+<ul class='list-unstyled lead fw-normal'>
+<li class='d-flex mb-4'>
+<span class='fal fa-check flex-shrink-0 mt-2 mr-3'></span>
+<span>Новичкам, которые хотят освоить профессию с нуля</span>
+</li>
+<li class='d-flex mb-4'>
+<span class='fal fa-check flex-shrink-0 mt-2 mr-3'></span>
+<span>Тем, кто уже пробовал учиться самостоятельно, но чувствует <strong>потребность в наставнике</strong></span>
+</li>
+<li class='d-flex mb-4'>
+<span class='fal fa-check flex-shrink-0 mt-2 mr-3'></span>
+<span>Тем, кто пробовал учиться на сторонних курсах, но до сих пор <strong>испытывает сложности</strong> в самостоятельном написании кода</span>
+</li>
+</ul>
+</div>
+<div class='col-lg-5 col-xl-7 align-self-end order-first order-lg-last'>
+<img class="img-fluid" width="635" height="280" alt="Тото обучает студентов" src="https://cdn2.hexlet.io/assets/professions/landing/for_whom-ffb77354ebbe81d761f2f9d94370684da327746b42205d78c2c50e57ddd0c549.jpg" />
+</div>
+</div>
+</section>
+
+<section class='container pt-4 my-md-4 my-xl-5' id='syllabus'>
+<div class='h1 mb-4 mb-sm-5'>Учим необходимому</div>
+<div class='row row-cols-1 row-cols-md-2 row-cols-lg-3'>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fab fa-php'></span>
+<b>PHP</b>
+<div class='mt-2'>
+Один из самых популярных языков, на котором написано более 80% сайтов в интернете
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fab fa-css3-alt'></span>
+<b>HTML и CSS</b>
+<div class='mt-2'>
+Языки создания веб-страниц. Описывают их структуру (расположение блоков) и внешний вид. Отвечают за форматирование текста
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fas fa-rocket'></span>
+<b>Фреймворки (Slim, Laravel)</b>
+<div class='mt-2'>
+Задает архитектуру проекта. Решает типовые задачи за программиста. Значительно сокращает количество кода и автоматизирует рутину
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fal fa-network-wired'></span>
+<b>Алгоритмы и структуры данных</b>
+<div class='mt-2'>
+Любая программа — это последовательность шагов, выполняемых над данными. Способ организации данных сильно влияет на удобство работы
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fas fa-database'></span>
+<b>Базы данных (SQL)</b>
+<div class='mt-2'>
+База данных – сердце любого проекта, они хранят внутри себя все содержимое (данные)
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fas fa-check'></span>
+<b>Качество</b>
+<div class='mt-2'>
+Автоматизированные тесты — неотъемлемая часть профессиональной разработки
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fas fa-archway'></span>
+<b>Архитектура</b>
+<div class='mt-2'>
+Создание простого для анализа и изменения кода требует хорошего понимания принципов его организации
+
+</div>
+</div>
+</div>
+<div class='col mb-4'>
+<div class='mb-1'>
+<span class='mr-2 fas fa-server'></span>
+<b>Инфраструктура</b>
+<div class='mt-2'>
+Программирование — это не только код, но и сопутствующие инструменты: командная строка, Composer, Git
+
+</div>
+</div>
+</div>
+</div>
+<div class='text-center fs-2 mb-5'>
+Хотите подробностей?
+<a aria-controls='collapseExample' aria-expanded='false' class='link-dark d-inline-block' data-bs-toggle='collapse' href='#fullProgram' role='button'>Покажите мне всё!</a>
+</div>
+<div class='collapse' id='fullProgram'>
+<h2 class='h4 p-3 mb-0'>Программа курса PHP-разработчик</h2>
+<div class='mb-5 overflow-hidden'>
+<div class='card border-0'>
+<div class='row no-gutters'>
+<div class='col-md-4'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/370/220/eyJpZCI6IjJhMTI4NDllM2ZkNTgwZmUwZTVjMTk4NzEyMDZjNmMzLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=d92ebf04bc05213eeab03eb2f35bd0abc772b436c2fa7f924a241a920e957f84"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/370/220/eyJpZCI6IjJhMTI4NDllM2ZkNTgwZmUwZTVjMTk4NzEyMDZjNmMzLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=7fe50c570866fd9343d8156e9b99880001ddd48253f31f23f6f7fbdde96f444d"><img src="https://cdn2.hexlet.io/assets/hexlet_projects_main-0eb359d20c18e3b160cf7d960b4e5064d93595f3d1ab4d85e1899a8621dfdb27.png" class="img-fluid" width="370" height="220" alt="Основы веб-программирования"></picture>
+</div>
+<div class='col-md-8 d-flex'>
+<div class='card-body d-flex flex-column'>
+<div class='mb-4'>
+<h3 class='h4'>
+1.
+Основы веб-программирования
+</h3>
+Создайте первые страницы с помощью HTML и CSS. Изучите основы программирования: типы данных, условные конструкции, циклы и функции. Прокачайте алгоритмическое мышление и реализуйте самостоятельно функции сортировки. Правильно настройте операционную систему для разработки, научитесь пользоваться командной строкой. Установите Git, редактор кода VS Code. Наполните свое портфолио на Github первыми программами.
+</div>
+<div class='mt-auto'>
+<a class='text-dark text-decoration-none' data-bs-toggle='collapse' href='#module1'>
+<span class='mr-2'>
+<b>Программа модуля</b>
+</span>
+<span class='fad fa-arrow-right'></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='collapse show' id='module1'>
+<div class='card border-0'>
+<div class='card-body'>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Программа наставника</div>
+<div class='text-muted small'>Вебинары, слаконары</div>
+</div>
+<div class='col-md-8'>
+<ul class='list-unstyled'>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Настройка окружения (менеджер версий asdf, ubuntu on windows)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Эффективная отладка кода (дебагер, подходы)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Поиск технической информации (<a href="https://guides.hexlet.io/howtosearch/" target="_blank">https://guides.hexlet.io/howtosearch/</a>)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Организация задач с помощью Kanban-доски (Trello)</p>
+
+</li>
+</ul>
+</div>
+</div>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Курсы</div>
+<div class='small text-muted'>Теория, квизы, практика в тренажере</div>
+</div>
+<div class='col-md-8'>
+<div class='row'>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/prog-life">Жизнь программиста</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>языки программирования</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>пути карьерного роста</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>терминология</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-basics">PHP: Основы</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>пространства имен</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>импорты</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>ссылки</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>включения файлов</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/cli-basics">Основы командной строки</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>терминал</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>shell</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>команды linux</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/intro_to_git">Введение в Git</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>github</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>рабочая директория</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>клонирование</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>восстановление</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-setup-environment">PHP: Настройка окружения</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>зависимости</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>composer</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>автозагрузка</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-overview-of-web-development">Ключевые аспекты веб-разработки на PHP</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>HTTP</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>фреймворки</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>ORM</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>тестирование</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-arrays">PHP: Массивы</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>синтаксис</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>вложенные массивы</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>алгоритмическая сложность</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>сортировка</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row mb-3'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Итоговый проект</div>
+<div class='small text-muted'><a target="_blank" rel="noopener" href="https://asciinema.org/a/l40Lrk3midkLmNEOmgZErGnY7">Посмотреть готовую реализацию</a></div>
+</div>
+<div class='col-md-8'>
+<div class='h5'>
+<a class="text-decoration-none text-dark" target="_blank" rel="noopener" href="/programs/php/projects/45">Игры разума</a>
+</div>
+Погрузитесь в экосистему PHP, научитесь настраивать рабочее окружение. Подружитесь с CodeSniffer (линтером, анализатором качества кода) и менеджером зависимостей Composer. Поймёте, чем git отличается от GitHub, поработаете с внешними репозиториями. Получите опыт построения архитектуры полноценного приложения и написания чистого кода.
+
+<a href="/programs/php/projects/45">Подробнее</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mb-5 overflow-hidden'>
+<div class='card border-0'>
+<div class='row no-gutters'>
+<div class='col-md-4'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/370/220/eyJpZCI6IjA2MGRlMmFlNmI4MThmOTQxYTRiOTk3MjNkNGJmMjdmLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=f6931f01a056895dd266b82364a13be3df94fbba676af9dee5feffd5dd9e4f0b"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/370/220/eyJpZCI6IjA2MGRlMmFlNmI4MThmOTQxYTRiOTk3MjNkNGJmMjdmLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=3b040f07860cb38f21381d7f1f68e5c80d97937caaee5ad156ec7fa96a638772"><img src="https://cdn2.hexlet.io/assets/hexlet_projects_main-0eb359d20c18e3b160cf7d960b4e5064d93595f3d1ab4d85e1899a8621dfdb27.png" class="img-fluid" width="370" height="220" alt="Профессиональный PHP"></picture>
+</div>
+<div class='col-md-8 d-flex'>
+<div class='card-body d-flex flex-column'>
+<div class='mb-4'>
+<h3 class='h4'>
+2.
+Профессиональный PHP
+</h3>
+Научитесь писать production-ready код. Освойте принципы объектно-ориентированного и функционального программирования. Начните писать модульный код, который легко расширять и поддерживать. Ускорьтесь с помощью автоматизированного тестирования своего кода. Настройте непрерывную интеграцию. Пишите код аки бог.
+</div>
+<div class='mt-auto'>
+<a class='text-dark text-decoration-none' data-bs-toggle='collapse' href='#module2'>
+<span class='mr-2'>
+<b>Программа модуля</b>
+</span>
+<span class='fad fa-arrow-right'></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='collapse' id='module2'>
+<div class='card border-0'>
+<div class='card-body'>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Программа наставника</div>
+<div class='text-muted small'>Вебинары, слаконары</div>
+</div>
+<div class='col-md-8'>
+<ul class='list-unstyled'>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Алгоритмы и структуры данных (прокачка на CodeBattle, грокаем алгоритмы)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Эффективная работа (горячие клавиши, организация рабочего пространства, слепая печать)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Функциональное программирование (чистота, побочные эффекты)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Устройство языков (Парсинг, AST, работа интерпретатора/компилятора, порядок вычислений, типизация)</p>
+
+</li>
+</ul>
+</div>
+</div>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Курсы</div>
+<div class='small text-muted'>Теория, квизы, практика в тренажере</div>
+</div>
+<div class='col-md-8'>
+<div class='row'>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/employment">Трудоустройство</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>стажировка</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>резюме</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>портфолио</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>первая работа</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-associative-arrays">PHP: Ассоциативные массивы</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>слияние</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>деструктуризация</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>хеш-таблица</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-functions">PHP: Функции</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>упаковка и распаковка</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>функции высшего порядка</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>замыкания</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>чистые функции</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-testing">PHP: Автоматическое тестирование</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>утверждения</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>PHPUnit</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>юнит-тесты</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>покрытие кода</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-data-abstraction">PHP: Абстракция с помощью данных</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>ER-модель</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>DDD</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>интерфейс</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-trees">PHP: Деревья</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>рекурсивные структуры данных</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>обход в глубину</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>древовидная рекурсия</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>файловая система</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-introduction-to-oop">PHP: Введение в ООП</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>классы</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>инкапсуляция</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>интерфейсы</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>исключения</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row mb-3'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Итоговый проект</div>
+<div class='small text-muted'><a target="_blank" rel="noopener" href="https://asciinema.org/a/Pe6QypnLEmFWssNAjCOJN1iii">Посмотреть готовую реализацию</a></div>
+</div>
+<div class='col-md-8'>
+<div class='h5'>
+<a class="text-decoration-none text-dark" target="_blank" rel="noopener" href="/programs/php/projects/48">Вычислитель отличий</a>
+</div>
+В этом проекте отрабатывается работа с коллекциями. Изучаются способы построения и обхода деревьев. Вы познакомитесь с разными форматами данных (json, yml), научитесь их парсить и формировать. Начнете писать тесты (PHPUnit) и освоите разработку через них. Познакомитесь с непрерывной интеграцией (CI) и элементами экстремального программирования (XP). Прокачаете ООП мышление.
+
+<a href="/programs/php/projects/48">Подробнее</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mb-5 overflow-hidden'>
+<div class='card border-0'>
+<div class='row no-gutters'>
+<div class='col-md-4'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/370/220/eyJpZCI6IjJhMGJkMzliOWJjMWI3MWM1NWVlNjM5OWFmMTI2N2UxLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=fcd1da215bcd9d8f77d683f03d6b84b38aac0d9a8802cf9fd7d28c7fed977e5c"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/370/220/eyJpZCI6IjJhMGJkMzliOWJjMWI3MWM1NWVlNjM5OWFmMTI2N2UxLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=ff19174cce0a63c7aabc486cf39b29f6781b038076aed41d557e96a681ff6685"><img src="https://cdn2.hexlet.io/assets/hexlet_projects_main-0eb359d20c18e3b160cf7d960b4e5064d93595f3d1ab4d85e1899a8621dfdb27.png" class="img-fluid" width="370" height="220" alt="Создание сайтов"></picture>
+</div>
+<div class='col-md-8 d-flex'>
+<div class='card-body d-flex flex-column'>
+<div class='mb-4'>
+<h3 class='h4'>
+3.
+Создание сайтов
+</h3>
+Разрабатывайте сайты используя архитектуру MVC. Изучите микрофреймворк Slim, разберитесь с HTTP и принципами работы веб-серверов. Разберитесь с роутингом и шаблонизаторами. Создайте базу данных и выполняйте SQL запросы из PHP кода. Деплойте код на сервер. Обеспечивайте безопасное выполнение кода предотвращая SQL-инъекции и XSS-атаки.
+</div>
+<div class='mt-auto'>
+<a class='text-dark text-decoration-none' data-bs-toggle='collapse' href='#module3'>
+<span class='mr-2'>
+<b>Программа модуля</b>
+</span>
+<span class='fad fa-arrow-right'></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='collapse' id='module3'>
+<div class='card border-0'>
+<div class='card-body'>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Программа наставника</div>
+<div class='text-muted small'>Вебинары, слаконары</div>
+</div>
+<div class='col-md-8'>
+<ul class='list-unstyled'>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Устройство операционных систем (книга код и администрирование, процессы, память, файловая система)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Подключение к обучению подкастов, книг и онлайн мероприятий, вовлечение в локальные комьюнити, ведение своего блога, помощь другим в слаке хекслета и обсуждениях</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Командная работа в Git</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>REST API, Очереди, Background Jobs</p>
+
+</li>
+</ul>
+</div>
+</div>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Курсы</div>
+<div class='small text-muted'>Теория, квизы, практика в тренажере</div>
+</div>
+<div class='col-md-8'>
+<div class='row'>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-object-oriented-design">PHP: Объектно-ориентированный дизайн</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>collect</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>PHPUnit</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>паттерны</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>текучий интерфейс</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/http_protocol">Протокол HTTP</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>методы http</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>формы</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>чанки</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>редиректы</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-mvc">Веб-разработка на PHP</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>CGI</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>slim framework</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>шаблонизация</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>отправка форм</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/rdb-basics">Основы реляционных баз данных</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>postgresql</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>транзакции</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>нормальные формы</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>СУБД</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-advanced-testing">PHP: Продвинутое тестирование</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>фикстуры</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>стабы</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>моки</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>побочные эффекты</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/layout-designer-basics">Основы современной вёрстки</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>HTML5</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>CSS3</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>Developer Tools</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>вёрстка</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row mb-3'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Итоговый проект</div>
+<div class='small text-muted'><a target="_blank" rel="noopener" href="https://php-l3-page-analyzer.herokuapp.com/">Посмотреть готовую реализацию</a></div>
+</div>
+<div class='col-md-8'>
+<div class='h5'>
+<a class="text-decoration-none text-dark" target="_blank" rel="noopener" href="/programs/php/projects/9">Анализатор страниц</a>
+</div>
+Фронтенд (Bootstrap, CDN). Фреймворк Laravel (Маршрутизация, Представление). База данных, (Миграции, query builders). Деплой (PaaS, Heroku). HTTP (в том числе выполнение запросов). Интеграционное тестирование. Логгирование.
+
+<a href="/programs/php/projects/9">Подробнее</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='mb-5 overflow-hidden'>
+<div class='card border-0'>
+<div class='row no-gutters'>
+<div class='col-md-4'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/370/220/eyJpZCI6IjM4OGUwNWQyMTBiNmM2MmZlNzJiMzcyNmRlN2QxMjIxLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=3d7cd62cb5e0396141d53a5e71142772301145270292c3f9944b788841322efd"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/370/220/eyJpZCI6IjM4OGUwNWQyMTBiNmM2MmZlNzJiMzcyNmRlN2QxMjIxLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=2710244d4ac9180065fb11d3ca05aacc4df4c82c54220da423825085183eed25"><img src="https://cdn2.hexlet.io/assets/hexlet_projects_main-0eb359d20c18e3b160cf7d960b4e5064d93595f3d1ab4d85e1899a8621dfdb27.png" class="img-fluid" width="370" height="220" alt="Разработка на Laravel"></picture>
+</div>
+<div class='col-md-8 d-flex'>
+<div class='card-body d-flex flex-column'>
+<div class='mb-4'>
+<h3 class='h4'>
+4.
+Разработка на Laravel
+</h3>
+Создавайте комплексные сервисы с помощью Laravel 8. Используйте ORM для создания моделей и их отображения на базу данных. Накатывайте миграции для эволюции базы данных. Реализуйте аутентификацию и авторизацию. Запускайте REPL для быстрого управления приложением и автоматизированные тесты для повышения качества кода и гарантии его работоспособности. 
+</div>
+<div class='mt-auto'>
+<a class='text-dark text-decoration-none' data-bs-toggle='collapse' href='#module4'>
+<span class='mr-2'>
+<b>Программа модуля</b>
+</span>
+<span class='fad fa-arrow-right'></span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='collapse' id='module4'>
+<div class='card border-0'>
+<div class='card-body'>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Программа наставника</div>
+<div class='text-muted small'>Вебинары, слаконары</div>
+</div>
+<div class='col-md-8'>
+<ul class='list-unstyled'>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Пробные собеседования</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Разворачивание и деплой (makefile, docker, хостинг, ansible, webpack, terraform)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Продуктовая разработка (Цель, Lean Startup: Time To Market, MVP, A/B тесты)</p>
+
+</li>
+<li class='d-flex mb-1'>
+<span class='fal fa-check mt-1 mr-3 flex-shrink-0'></span>
+<p>Инженерная культура. (<a href="https://guides.hexlet.io/check-list-of-engineering-practices/" target="_blank">https://guides.hexlet.io/check-list-of-engineering-practices/</a>)</p>
+
+</li>
+</ul>
+</div>
+</div>
+<div class='row mb-4'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Курсы</div>
+<div class='small text-muted'>Теория, квизы, практика в тренажере</div>
+</div>
+<div class='col-md-8'>
+<div class='row'>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-polymorphism">PHP: Полиморфизм</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>Динамическая диспетчеризация</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>параметрический полиморфизм</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>полиморфизм подтипов</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>инверсия зависимостей</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-classes">PHP: Погружаясь в классы</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>позднее связывание</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>трейты</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>абстрактные классы</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-orm-eloquent">PHP: Eloquent (ORM)</a></div>
+<div class='row row-cols-auto g-1'>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/php-laravel">PHP: Laravel</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>ORM</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>шаблонизация (blade)</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>роутинг</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>контроллеры</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='col-md-6 mb-3'>
+<div class='card h-100'>
+<div class='card-body overflow-hidden'>
+<div class='h6'><a class="text-decoration-none stretched-link link-dark" target="_blank" rel="noopener" href="/courses/regexp">Регулярные выражения</a></div>
+<div class='row row-cols-auto g-1'>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>жадность</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>флаги</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>классы символов</div>
+</div>
+<div class='col'>
+<div class='badge bg-info bg-opacity-10 text-muted d-block text-truncate'>квантификация</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row mb-3'>
+<div class='col-md-4 mb-3'>
+<div class='h4 x-text-marker-decoration'>Итоговый проект</div>
+<div class='small text-muted'><a target="_blank" rel="noopener" href="https://php-l4-task-manager.herokuapp.com/">Посмотреть готовую реализацию</a></div>
+</div>
+<div class='col-md-8'>
+<div class='h5'>
+<a class="text-decoration-none text-dark" target="_blank" rel="noopener" href="/programs/php/projects/57">Менеджер задач</a>
+</div>
+Проектирование. Нормализация (и Денормализация) базы данных, связи между сущностями. ORM. Heroku (PaaS). Трекинг ошибок в продакшене с Rollbar. Фреймворк Laravel.
+
+<a href="/programs/php/projects/57">Подробнее</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='container py-4 my-md-4 my-xl-5'>
+<h2 class='h1 mb-4'>Расписание</h2>
+<p class='lead fw-normal mb-0'>Совмещайте учебу с работой. Учитесь, когда вам удобно  — у нас нет строгого расписания. Рекомендуем заниматься от 10 часов в неделю, чтобы сохранять темп обучения в группе.</p>
+<div class='row row-cols-1 row-cols-md-2 row-cols-lg-3 mt-5'>
+<div class='col mb-5'>
+<span class='fal fa-graduation-cap fa-3x mb-3'></span>
+<h3 class='h2 mb-3'>Уроки</h3>
+<p class='mb-3'>
+Теория, тесты, практические упражнения с автоматической проверкой в браузере
+</p>
+<div class='d-flex mb-2'>
+<span class='fal fa-check mr-2 mt-1'></span>
+Самостоятельно, в удобное время
+</div>
+<div class='d-flex'>
+<span class='fal fa-check mr-2 mt-1'></span>
+Если непонятно, можно задать вопрос в чате группы наставнику или одногруппникам
+</div>
+</div>
+<div class='col mb-5'>
+<span class='fal fa-calendar-alt fa-3x mb-3'></span>
+<h3 class='h2 mb-3'>Мероприятия</h3>
+<p class='mb-3'>Вебинары, слаконары, сессии лайв-кодинга</p>
+<div class='d-flex mb-2'>
+<span class='fal fa-check mr-2 mt-1'></span>
+Один раз в неделю, онлайн, проводит наставник
+</div>
+<div class='d-flex'>
+<span class='fal fa-check mr-2 mt-1'></span>
+Если не получается присутствовать, можно смотреть в записи
+</div>
+</div>
+<div class='col mb-5'>
+<span class='fal fa-laptop-code fa-3x mb-3'></span>
+<h3 class='h2 mb-3'>Проекты</h3>
+<p class='mb-3'>Реальные приложения, сервисы и сайты  — вы пишете их с нуля до релиза</p>
+<div class='d-flex mb-2'>
+<span class='fal fa-check mr-2 mt-1'></span>
+Самостоятельно, в своем темпе, примерно месяц на каждый проект
+</div>
+<div class='d-flex'>
+<span class='fal fa-check mr-2 mt-1'></span>
+Наставник контролирует и дает обратную связь
+</div>
+</div>
+</div>
+</section>
+
+<section class='container pt-4 pt-lg-5 my-md-4 my-xl-5'>
+<div class='row align-items-center'>
+<div class='col-lg-5 col-xl-7'>
+<img class="img-fluid" width="635" height="564" alt="" src="https://cdn2.hexlet.io/assets/professions/landing/internship-bfc9dad4031d61cfb0553878515a7cae69c33bb5ba27abc22a2a424f7ea2413f.jpg" />
+</div>
+<div class='col-lg-7 col-xl-5'>
+<h2 class='h1 mb-3'>Очень много практики</h2>
+<p>
+<span class='fw-bold'>→</span>
+<span class='fw-bold'>320+ упражнений</span>
+для выполнения в браузере, домашние задания с моментальной автопроверкой. Выполняйте их, когда вам удобно
+</p>
+<p>
+<span class='fw-bold'>→</span>
+<span class='fw-bold'>4 проекта для портфолио на GitHub</span>
+– по одному для каждого учебного модуля. Начинаем с простого и погружаемся в разработку для реального бизнеса
+</p>
+<p>
+<span class='fw-bold'>→</span>
+<span class='fw-bold'>11 Open Source проектов Хекслета</span>
+— научитесь работать с чужим кодом, оформлять пулреквесты. Это ваш опыт реального продакшна и +100 очков в карму программиста
+</p>
+<p>
+<span class='fw-bold'>→</span>
+<span class='fw-bold'>150 тестовых заданий</span>
+от наших партнеров – работайте с базой типовых задач из настоящих проектов. Это придаст уверенности на собеседованиях
+</p>
+</div>
+</div>
+</section>
+
+<section class='container py-4 py-lg-5 my-4 my-xl-5'>
+<div class='row align-items-center'>
+<div class='col-lg-7 col-xl-5'>
+<h2 class='h1 mb-3'>Поможем с трудоустройством</h2>
+<div class='lead fw-normal'>
+Наполним портфолио, составим резюме и покажем его всем нашим партнерам. Расскажем, где искать работу, как правильно откликаться на вакансии и проходить собеседования
+</div>
+</div>
+<div class='col-lg-5 col-xl-7'>
+<img class="img-fluid" width="635" height="367" alt="Тото на собеседовании" src="https://cdn2.hexlet.io/assets/professions/landing/hr-8118e45b69ad019f07e66a1a7b34b4d42823036bbd51a6565c06f0587a071978.jpg" />
+</div>
+</div>
+<h3 class='h4 fw-bold mt-4 mb-5 text-center'>Наши выпускники работают в известных компаниях</h3>
+<div class='d-flex flex-wrap align-items-center justify-content-center' style='filter: grayscale(100%);'>
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Альфа Банк" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/logo-alfa-890ab4ff5e4e9a25bc0b9efcda01c13e5354a6cca336fd6d995edd733d8c5279.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Rambler" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/rambler-1f796b82e7063320f02b0a6957435164993803b95046848107057a615fba39da.png" />
+<img class="mx-3 mx-sm-5 my-3 p-2" width="120" alt="Regru" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/regru-6b49711ba437059c039c297803c3cdab9163e8565f78eb11a4b12837f14ffebb.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Авиасейлc" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/aviasales-3729dfcb2130db74e8864a8d58c81c671b3ea9f4a9fd709f216c31b80e487272.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Bookmate" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/bookmate_hrz-a3f33ccef0631874729d7c19b2d5bcaa39c8b2a665e55f7da977fe4eaa53bf9e.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Учи.ру" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/uchiru-6f8bc3dfd3cbcc37bd4a6bb4d74613600f6bb35a4321bcfb08ece3395e9a8dc5.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Яндекс" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/yandex-534b368c41381502c28a1c1b57ffcc38dfc6d97b4fb72aee9e4ccb5dbb87c76f.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Тинькофф" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/tinkoff-6f722c6ac77e1cf903f8fed4ce393f61cafb4808a9c796c0b31e522b5e6e77a0.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Agima" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/agima-e79c31f446fc32417baafa0f08a49b795af3e18b776eded6f54e007aae08025a.svg" />
+<img class="mx-3 mx-sm-5 my-3 p-1" width="120" alt="Funbox" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/funbox-3903337b3475d9698c0e77b5ad46720d8c0e4b94d17f6aa7d7fa19b40e39a356.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="PeterService" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/peter_service-68394dd214c6b55c60d21c95af0edb381446deadc639bac92d7c2c975276f55d.png" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Simtech" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/simtech-976689f4b2874c2c34d76f6482a76fd4fac0d85b5e09c31488b06a6033d61135.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Health Samurai" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/healthsamurai-de0cbe1265a2fea0977206e00fd46116a7a6abc4bc1eb218e68d5b8333a40196.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Dualboot partners" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/dualboot-fe9eb3fdd20f7de007284c197f1911fb83a8513b4d847a7f8fd2dfa9500bca8f.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Abbyy" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/abbyy-3e4455e59357c35648eee1b753e1a2e5720b97d5eefbfafe38c7ff74155e4ee3.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Delivery Club" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/dc-c78db9d005a163587b28e5e8b9292de3a24cf7a87d1420372389d2135e9cfb6b.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Itech Group" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/itech-7fe68ad98171f25a5cd3aee165148d177a950dcde785638f1d2e2406f727ac0a.png" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Avito Tech" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/avito_tech-819375201e3bbc999be53e2d9a928e8e3c625e94f9886f2534f6d24ead7a9ff4.png" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="QIWI" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/qiwi-cd3bb8089339132813f22a3702b7331c5232288f691cbeecb3f1150351ff7937.svg" />
+<img class="mx-3 mx-sm-5 my-3 p-4" width="120" alt="VC.RU" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/vc_ru-1b8bb9557664068432c8676fa3b1782e731b6d4c24b2c0c2fc8d9f8e556fc819.png" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Ростелеком ИТ" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/rtk_it-88e11c8d0cf9325bc7e5e374beaa3e5d6be8b329fa75871b8c3240855075eb86.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Simple life" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/simple_life-8fe544d274c609b02e4f1711c262168a784954f065cc452c9efb310f89de858c.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Комтек" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/pkzdrav-01f68935f799469026a76e5d238f6250bdc3d3bab677c056df3eab39b650b645.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Greenatom" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/greenatom_rossatom-f48a03f8b320af07e3c113c858651d0bd2eadd7022ff126529334d65ca0e5471.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="CSSSR" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/csssr-4ed2f90a12fba3e5d8de1d1e86b789e633c33e9927d10a032ca881e36a868960.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="JetRockets" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/jetrockets-00cbddf6d82c072812554639605d9d77e5589555f32cc3575afbb4748595a268.svg" />
+<img class="mx-3 mx-sm-5 my-3" width="120" alt="Sber Devices" loading="lazy" src="https://cdn2.hexlet.io/assets/logos/sber_devices-e3837e95fc5219fc92ff3c53371b57e8dd42d5717cee236cb3d09bebf7b2cd1d.svg" />
+</div>
+
+</section>
+
+<section class='container py-4 py-lg-5 my-md-4 my-xl-5'>
+<h2 class='h1 mb-4 mb-md-5'>Преподаватели и наставники</h2>
+<div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4'>
+<div class='col mb-4'>
+<div class='card h-100'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/500/500/eyJpZCI6IjA2MjEwYmFjYjE0NTU2NmIyMDg0MjliYzllNjY3OTAxLmpwZWciLCJzdG9yYWdlIjoic3RvcmUifQ?signature=6ef6dac6336c298ca51212bce9eac65a5ecbbbda28664b88c80371a941ee669a"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/500/500/eyJpZCI6IjA2MjEwYmFjYjE0NTU2NmIyMDg0MjliYzllNjY3OTAxLmpwZWciLCJzdG9yYWdlIjoic3RvcmUifQ?signature=bdf91b4929c102f662693e46238ba29dc95b56679237597ee52bc19640d9f894"><img src="https://cdn2.hexlet.io/assets/team/you-bc72575a0e6eb39de3e28e54a8df1138beaa57cd5300061ecb5c202773131f9e.jpg" class="card-img-top" width="500" height="500" alt="Аватар наставника Georgiy Baranov"></picture>
+<div class='card-body d-flex flex-column'>
+<div class='h5'>Georgiy Baranov</div>
+<div class='text-muted'>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4'>
+<div class='card h-100'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/500/500/eyJpZCI6IjA4MTViYzFmYTRjNzE3MWIzZWFjOTBlYTBiMTRmNGEzLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=02842b28645b2868dc52040cb2fa68b30a61e4fc5b4a1d1b75e34d4f57ce83f9"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/500/500/eyJpZCI6IjA4MTViYzFmYTRjNzE3MWIzZWFjOTBlYTBiMTRmNGEzLnBuZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=a5ebbcb3a78c6bf33b1a762029c46ab9f4f3a73280202e2e3fd8606f6786a928"><img src="https://cdn2.hexlet.io/assets/team/you-bc72575a0e6eb39de3e28e54a8df1138beaa57cd5300061ecb5c202773131f9e.jpg" class="card-img-top" width="500" height="500" alt="Аватар наставника Александр Лунев"></picture>
+<div class='card-body d-flex flex-column'>
+<div class='h5'>Александр Лунев</div>
+<div class='text-muted'>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4'>
+<div class='card h-100'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/500/500/eyJpZCI6ImM5OWI3YzQ0MDYwMGJjMjI3ODVkODAzODIwNzIzOWQ3LmpwZWciLCJzdG9yYWdlIjoic3RvcmUifQ?signature=fbcf05ec04b71199479ee0ce3251564514800a5d74c17187b9d03888a297efa3"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/500/500/eyJpZCI6ImM5OWI3YzQ0MDYwMGJjMjI3ODVkODAzODIwNzIzOWQ3LmpwZWciLCJzdG9yYWdlIjoic3RvcmUifQ?signature=fb70c7c11d589da0caf1b723e6aaa6e651cb26cd48326d82c0989106355e0ba5"><img src="https://cdn2.hexlet.io/assets/team/you-bc72575a0e6eb39de3e28e54a8df1138beaa57cd5300061ecb5c202773131f9e.jpg" class="card-img-top" width="500" height="500" alt="Аватар наставника Александр Пупышев"></picture>
+<div class='card-body d-flex flex-column'>
+<div class='h5'>Александр Пупышев</div>
+<div class='text-muted'>
+Full Stack Developer,
+RoboFinance
+</div>
+</div>
+</div>
+
+</div>
+<div class='col mb-4'>
+<div class='card h-100'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/500/500/eyJpZCI6ImZiMzcwZTkzZGExNzkzODRlZWYyM2M2Y2E0ZjZkNTRmLmpwZWciLCJzdG9yYWdlIjoic3RvcmUifQ?signature=df02b53488e8cd435fde4d14f9fe60ec5c262da17b0df9e3aca8cfd33bbbd849"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/500/500/eyJpZCI6ImZiMzcwZTkzZGExNzkzODRlZWYyM2M2Y2E0ZjZkNTRmLmpwZWciLCJzdG9yYWdlIjoic3RvcmUifQ?signature=b098f6e5c483d3a16e8a9f24079105db096845f2b055d1b7b77eecb1879e318a"><img src="https://cdn2.hexlet.io/assets/team/you-bc72575a0e6eb39de3e28e54a8df1138beaa57cd5300061ecb5c202773131f9e.jpg" class="card-img-top" width="500" height="500" alt="Аватар наставника Байзет Тлюпов"></picture>
+<div class='card-body d-flex flex-column'>
+<div class='h5'>Байзет Тлюпов</div>
+<div class='text-muted'>
+
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class='container pt-2 pb-4 py-lg-5 my-4 my-xl-5'>
+<div class='row align-items-center'>
+<div class='col-lg-7 col-xl-5'>
+<h2 class='h1 mb-3'>Сертификат</h2>
+<p class='lead fw-normal mb-0'>Работодатели ценят выпускников Хекслета, сертификат — подтверждение того, что вы серьезно поработали над собой и имеете хорошую перспективу стать первоклассным специалистом</p>
+</div>
+<div class='col-lg-5 col-xl-7 order-first order-lg-last mb-4 mb-lg-0'>
+<picture><source type="image/webp" srcset="https://cdn2.hexlet.io/derivations/image/fill_webp/1270/898/eyJpZCI6ImMyODYzOGVlYTU4OGJmMzZlOWU1NWVhODcwOTA4YTkzLmpwZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=6a04ea5ed525f1bfca0c7b6fe154ec87348f684cc6de3f954e358a79895abfae"><source type="image/png" srcset="https://cdn2.hexlet.io/derivations/image/fill_png/1270/898/eyJpZCI6ImMyODYzOGVlYTU4OGJmMzZlOWU1NWVhODcwOTA4YTkzLmpwZyIsInN0b3JhZ2UiOiJzdG9yZSJ9?signature=c1dc39bb7be2ce56629ec63bc8ed134c8020a4d3be5b21133bd4fe8275d4d268"><img src="https://cdn2.hexlet.io/assets/professions/landing/certificate-e9f0ba31fa1e75d7ea52c3154e5bbe18bf3f58223d8a9794ed415eb00f663725.jpg" class="img-fluid" width="1270" height="898" alt="Сертификат"></picture>
+</div>
+</div>
+</section>
+
+<section class='container py-4 py-lg-5 my-4 my-xl-5' itemprop='VideoObject' itemscope itemtype='https://schema.org/VideoObject'>
+<h2 class='h1 mb-5'>Обучение в браузере: теория, тесты, упражнения</h2>
+<div class='text-center'>
+<video autoplay class='w-100 shadow' loop muted playsinline='' src='https://cdn2.hexlet.io/assets/how_to_study_on_hexlet-ad2196109ff0ac7107981614e217f2eaacd03cc5ee6d68c39809b5d5f3240106.mp4'></video>
+</div>
+<meta content='Профессия &quot;PHP-программист&quot;, обучение с нуля за 8 месяцев' itemprop='name'>
+<meta content='PHP-разработчик — Разрабатывает сайты на Laravel. Строит взаимодействие с внешними сервисами и программирует собственный API. Проектирует архитектуру базы да...' itemprop='description'>
+<meta content='https://cdn2.hexlet.io/assets/video_thumbnai-acf48a0b04fd9dc1b50434e0b904ee1fb027df00044f5a9fdca95387b7bcb888.jpg' itemprop='thumbnailUrl'>
+<meta content='https://cdn2.hexlet.io/assets/how_to_study_on_hexlet-ad2196109ff0ac7107981614e217f2eaacd03cc5ee6d68c39809b5d5f3240106.mp4' itemprop='contentUrl'>
+<meta content='2016-02-04 19:42:27 UTC' itemprop='uploadDate'>
+</section>
+
+<section class='container py-4 py-lg-5 my-md-4 my-xl-5'>
+<div class='mb-5'>
+<h2 class='h1'>Истории успеха</h2>
+</div>
+<div class='position-relative px-sm-5 mx-sm-n4 mx-xl-n5'>
+<div class='swiper pb-5'>
+<div class='swiper-wrapper'>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Сергей Ампилов" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/ampilov-9cbb7c07e0e0156926699d6e039ee484fdefaf87765889a5f37f679bd3ae6609.jpg" />
+</div>
+<div>
+<div class='h5 fw-bold'>Сергей Ампилов</div>
+<div class='text-muted'>г. Москва</div>
+</div>
+</div>
+<p class='mb-0'>Тогда я начал смотреть в сторону онлайн-курсов. Особо не вникая и не теряя времени, начал скупать всё подряд. Курсы верстки HTML, CSS. Потом курсы frontend – JavaScript, React. Я проходил одновременно 2-3 курса в ускоренном режиме. Сил уходило много, а прогресс был почти нулевой. Потому что тупо повторяя за преподавателем, как оказалось, ничему научиться нельзя. Я приуныл. И однажды, листая бесконечные отзывы под очередным ютубовским роликом, обнаружил ссылку на Хекслет и несколько комментариев, что там учат хорошо.</p>
+<p class='mb-0'>
+Я тем же вечером стартанул на бесплатных курсах и через два дня купил платную подписку. Я реально залип. И, о чудо! У меня пошел прогресс. Я наконец-то начал программировать. Сам! Хоть и на учебных задачах, хоть и очень медленно! Но дело пошло.
+<a target="_blank" class="d-inline-block" href="/blog/posts/kak-ya-stal-programmistom-v-33-goda">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Вячеслав Быков" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/bykov-de705fe263ef28213a61761417c8fd9da6e922d253164475b912eb0362b503bc.jpg" />
+</div>
+<div>
+<div class='h5 fw-bold'>Вячеслав Быков</div>
+<div class='text-muted'>г. Москва</div>
+</div>
+</div>
+<p class='mb-0'>После Хекслета собеседования на Middle Frontend разработчика были только в радость. Ты просто рассказываешь всё, о чем читал на протяжении полугода, и делишься опытом с проектов. Тестовых заданий уж точно бояться не стоит, здесь я делал вещи и посложнее. Всего прошел шесть собеседований, после которых получил пять офферов. Дальше выбирал по принципу более интересного стека и команды, в одиночку работать я уж точно теперь не хочу.</p>
+<p class='mb-0'>
+Ну и, конечно, приятный бонус: зарплаты у мидлов гораздо интересней, а зона ответственности меньше, чему у фулстек-самоучки ;)
+<a target="_blank" class="d-inline-block" href="/blog/posts/kak-ya-hotel-podtyanut-jquery-i-sluchayno-umnozhil-zarplatu-na-dva">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Роман Авилов" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/romario-e02cc1734a8c9b2db6579d9bf96cba7a5347ddef8b73581df03de78908ac6b19.png" />
+</div>
+<div>
+<div class='h5 fw-bold'>Роман Авилов</div>
+<div class='text-muted'>г. Хабаровск</div>
+</div>
+</div>
+<p class='mb-0'>После оплаты появилось некое спокойствие: учебная траектория есть, осталось только учиться. Теория плюс практика — то что нужно. Задачи были и лёгкие, и трудные, и очень трудные. Одну три дня решал.</p>
+<p class='mb-0'>Работу нашел через телеграм-чат местного IT-сообщества. Откликнулся на вакансию. Проект только запускался, и меня взяли фронтом на React. Будущий начальник посмотрел мой домашний проект. Вопросы были не по теории, а именно по практическому применению знаний и по проекту.</p>
+<p class='mb-0'>Мне дали время подумать, я подумал и согласился, о чём не жалею. Зарплата, кстати, выросла в два раза. Новый проект предполагал TypeScript. Я его не знал, но сошлись на том, что внедрим постепенно. Теперь я люблю TypeScript.</p>
+<p class='mb-0'>
+Да, забыл сказать, сейчас мне 43 года :-)
+<a target="_blank" class="d-inline-block" href="/blog/posts/vozrast-ne-pomeha">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Денис Солодухин" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/drumsid-559f5e7bddc9811babb7186349395e952c6ea70bfee81534766114ef85463d42.jpg" />
+</div>
+<div>
+<div class='h5 fw-bold'>Денис Солодухин</div>
+<div class='text-muted'>г. Долгопрудный</div>
+</div>
+</div>
+<p class='mb-0'>Меня повысили на работе. Мне 40 лет. У меня двое маленьких детей. Есть первая работа в жизни, которая мне настолько нравится, что когда еду домой, то, бывает, проезжаю остановку, потому что меня прёт от новой задачи.</p>
+<p class='mb-0'>Понимаю, мой апгрейд стал возможен благодаря ребятам из Хекслета, которые грамотно организовали, настроили и реализовали пожалуй лучшую систему обучения. Что очень важно, ребята не останавливаются на достигнутом.</p>
+<p class='mb-0'>
+Даже в 40 лет можно реализовать казалось бы невозможное: изучить программирование с нуля и устроиться на работу.
+<a target="_blank" class="d-inline-block" href="/blog/posts/kak-ya-stal-programmistom-v-39-let">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Владислав Гончаренко" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/vladgotodo-1cf885b1492327c3936112bf3114c94d2586ce0e54cdb04539391957e75af4dc.png" />
+</div>
+<div>
+<div class='h5 fw-bold'>Владислав Гончаренко</div>
+<div class='text-muted'>Stamford, USA</div>
+</div>
+</div>
+<p class='mb-0'>Когда я прошёл нужные темы на Хекслете и почувствовал, что третий глаз на ООП открылся, начал рассылать резюме. В какой-то момент наткнулся на курсы в EPAM. Так как курс по Java на Хекслете дал мне огромный и правильно структурированный багаж знаний, то я с легкостью прошел все собеседования и сам курс EPAM, который длился несколько месяцев. Окончив курс, не узнал ничего нового, связанного с джавой. Но впервые в жизни в процессе обучения достиг уровня, на котором мог помогать окружающим, а не спрашивать постоянно что-то у людей вокруг.</p>
+<p class='mb-0'>
+Вот с тех самых пор я и работаю в EPAM. Пришел туда Junior, стал Middle через полгода, а ещё через полтора сдал экзамен, стал Senior и уехал в США.
+<a target="_blank" class="d-inline-block" href="/blog/posts/kak-blagodarya-heksletu-ya-ustroilsya-v-epam">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Дарья Харитонова" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/deirdre-0bb9a51d582c5920c1088264309cc4fb050aa2966ff8afcd16d7718a34a0102e.png" />
+</div>
+<div>
+<div class='h5 fw-bold'>Дарья Харитонова</div>
+<div class='text-muted'>г. Санкт-Петербург</div>
+</div>
+</div>
+<p class='mb-0'>Выбирая формат обучения, я решила, что вместе учиться намного веселее. Тогда группы только-только собирались стартовать, поэтому я оказалась в числе первопроходцев. Не знаю как остальным, а мне формат полностью зашел — были и коллективные созвоны, и кодинг по зуму и мемы в слаке. Многие сомневались, что времени наставника на всех не хватит, но у нас, кажется, никто на это не жаловался.</p>
+<p class='mb-0'>
+В итоге работаю программистом уже третью неделю и когда иду на работу, в моей душе взрываются фейерверки и поют птички. Хекслет делает очень важную штуку — учит правильным подходам, идти не легким путем, а верным.
+<a target="_blank" class="d-inline-block" href="/blog/posts/hochu-pisat-bekend">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Сергей Желудков" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/zheludkov-7deecfca9346c7002a3f29e4d5837c03d85873047ef3ac49b54496dda90d43b1.png" />
+</div>
+<div>
+<div class='h5 fw-bold'>Сергей Желудков</div>
+<div class='text-muted'>г. Москва</div>
+</div>
+</div>
+<p class='mb-0'>
+Во втором проекте начинают использоваться дополнительные библиотеки, которые не изучаются в курсах — и вот тут было просто оцепенение. Что это? Как это работает? Кто-то начал жаловаться, что этого не было в курсах и как теперь самостоятельно разбираться в этом. И вот ответ от Кирилла Мокевнина перевернул мое сознание на тот момент. Он сказал, что сейчас существуют тонны разных библиотек и материалов, но основная задача Хекслета  — не обучить нас пользоваться всеми этими библиотеками, а научить нас мыслить как разработчики, разбираться и копаться в библиотеках, в документации и в итоге учиться самостоятельно.
+<a target="_blank" class="d-inline-block" href="/blog/posts/kak-ya-brosil-vse-i-stal-frontend-razrabotchikom">Читать полностью</a>
+</p>
+</div>
+<div class='swiper-slide'>
+<div class='d-flex mb-3 align-items-center'>
+<div class='mr-3'>
+<img class="img-fluid rounded-circle" width="80" height="80" alt="Аватар пользователя Виктория Музычук" src="https://cdn2.hexlet.io/assets/faces/program_success_stories/swollou-5f69557cf3ceca66e331be616fa9a6e7c0affc6655a5fe1bd9f585fcd8c88348.png" />
+</div>
+<div>
+<div class='h5 fw-bold'>Виктория Музычук</div>
+<div class='text-muted'>г. Москва</div>
+</div>
+</div>
+<p class='mb-0'>Признаюсь сразу — я пришла на Хекслет всего лишь попробовать. Сама не заметила, как погрузилась в него с головой. Мы очень многое прошли вместе: были как падения — страх, неуверенность, отчаяние даже, так и взлеты — радость, удовлетворение, ощущение собственной значимости. Ощущение огромной, неописуемой благодарности к этому проекту и людям, которые с каждым днем делают его лучше.</p>
+<p class='mb-0'>
+Недавно исполнился год, как я учусь на Хекслете. Год, как я учусь программированию. Отметила эту дату прохождением испытательного срока на должности PHP-разработчика. До сих пор не могу в это поверить.
+<a target="_blank" class="d-inline-block" href="/blog/posts/zabluditsya-v-tryoh-sosnah-no-vyyti-k-zvyozdam">Читать полностью</a>
+</p>
+</div>
+</div>
+<div class='swiper-pagination'></div>
+</div>
+<div class='swiper-button-prev d-none d-sm-flex'></div>
+<div class='swiper-button-next d-none d-sm-flex'></div>
+</div>
+</section>
+
+<section class='bg-dark py-5'>
+<div class='container py-md-4' id='enroll'>
+<div class='row g-4 g-xl-5'>
+<div class='col-lg-6 col-xl-7'>
+<div class='card h-100'>
+<div class='card-body p-4 p-md-5'>
+<h2 class='h1 x-text-marker-decoration'>Стоимость обучения</h2>
+<div class='mt-4 mt-lg-5'>
+<span class='display-4'>
+от
+6 230 ₽
+</span>
+<span class='lead me-3'>/ месяц</span>
+<span class='fs-4 text-muted text-decoration-line-through d-inline-block'>
+14 000 ₽
+/мес.
+</span>
+</div>
+<p class='lead fw-normal mb-0 mt-3'>или</p>
+<div class='mt-4'>
+<span class='h3 mb-0 mr-1'>98 000 ₽</span>
+<span class='text-muted'>вместо 112 000 ₽
+</span>
+<p class='lead'>при оплате сразу за 8 месяцев</p>
+</div>
+<div class='mt-4 mt-md-5 border-top pt-4 pt-md-5 d-flex'>
+<span class='fas fa-wallet fa-lg flex-shrink-0 mt-1 mr-3'></span>
+Полный возврат денег в течение первых двух недель, если передумали
+</div>
+</div>
+</div>
+</div>
+<div class='col-lg-6 col-xl-5'>
+<div class='card h-100'>
+<div class='card-body p-4 p-md-5'>
+<div class='mb-3 mt-lg-2'>
+<span class='mr-4 text-nowrap'>
+<span class='fal fa-calendar-alt fa-fw mr-1'></span>
+29 сентября
+
+</span>
+<span class='text-nowrap'>
+<span class='fal fa-rocket fa-fw mr-1'></span>
+Бесплатно
+7 курсов
+
+</span>
+</div>
+<div class='h3 mb-5 mr-lg-5'>Записаться на&nbsp;программу и начать бесплатный период</div>
+<form class="simple_form new_program_lead_with_registration_form" id="new_program_lead_with_registration_form" novalidate="novalidate" action="/programs/php/member/register_and_create_with_lead#enroll" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="x2amGEkoRwdNGDVqnwhgN2Ew9brB6o3G1OccGXTg6TKZbp2Kgsn6bATqrvsbvy2FcAP-z5CIhHhVdapa4PygGA" /><div class="mb-2 hidden program_lead_with_registration_form_signup_source"><input class="form-control hidden" value="guest_program" type="hidden" name="program_lead_with_registration_form[signup_source]" id="program_lead_with_registration_form_signup_source" /></div>
+<div class="mb-2 hidden program_lead_with_registration_form_source"><input class="form-control hidden" value="hexlet" type="hidden" name="program_lead_with_registration_form[source]" id="program_lead_with_registration_form_source" /></div>
+<div class="mb-2 hidden program_lead_with_registration_form_source_form"><input class="form-control hidden" value="guest_program" type="hidden" name="program_lead_with_registration_form[source_form]" id="program_lead_with_registration_form_source_form" /></div>
+<div class="mb-2 hidden program_lead_with_registration_form_lead_type"><input class="form-control hidden" value="b2c" type="hidden" name="program_lead_with_registration_form[lead_type]" id="program_lead_with_registration_form_lead_type" /></div>
+<div class="mb-2 hidden program_lead_with_registration_form_learning_format"><input class="form-control hidden" value="group" type="hidden" name="program_lead_with_registration_form[learning_format]" id="program_lead_with_registration_form_learning_format" /></div>
+<div class="mb-2 string optional program_lead_with_registration_form_user_name"><label class="form-label string optional" for="program_lead_with_registration_form_user_name">Ваше имя</label><input class="form-control string optional" type="text" name="program_lead_with_registration_form[user_name]" id="program_lead_with_registration_form_user_name" /></div>
+<div class="mb-2 email optional program_lead_with_registration_form_email"><label class="form-label email optional" for="program_lead_with_registration_form_email">Электронная почта</label><input class="form-control string email optional" type="email" name="program_lead_with_registration_form[email]" id="program_lead_with_registration_form_email" /></div>
+<div class="mb-2 tel optional program_lead_with_registration_form_phone_number"><label class="form-label tel optional" for="program_lead_with_registration_form_phone_number">Номер телефона</label><input class="form-control string tel optional" type="tel" name="program_lead_with_registration_form[phone_number]" id="program_lead_with_registration_form_phone_number" /></div>
+<div class='mx-auto mt-3'>
+<input type="submit" name="commit" value="Начать учиться" class="btn btn-primary w-100" data-disable-with="Начать учиться" />
+</div>
+<div class='mt-4'>
+<script src="https://www.recaptcha.net/recaptcha/api.js?render=6LenGbgZAAAAAM7HbrDbn5JlizCSzPcS767c9vaY"   ></script>
+        <script>
+          // Define function so that we can call it again later if we need to reset it
+          // This executes reCAPTCHA and then calls our callback.
+          function executeRecaptchaForRegistrationWithLead() {
+            grecaptcha.ready(function() {
+              grecaptcha.execute('6LenGbgZAAAAAM7HbrDbn5JlizCSzPcS767c9vaY', {action: 'registration_with_lead'}).then(function(token) {
+                setInputWithRecaptchaResponseTokenForRegistrationWithLead('g-recaptcha-response-data-registration-with-lead', token)
+              });
+            });
+          };
+          // Invoke immediately
+          executeRecaptchaForRegistrationWithLead()
+
+          // Async variant so you can await this function from another async function (no need for
+          // an explicit callback function then!)
+          // Returns a Promise that resolves with the response token.
+          async function executeRecaptchaForRegistrationWithLeadAsync() {
+            return new Promise((resolve, reject) => {
+             grecaptcha.ready(async function() {
+                resolve(await grecaptcha.execute('6LenGbgZAAAAAM7HbrDbn5JlizCSzPcS767c9vaY', {action: 'registration_with_lead'}))
+              });
+            })
+          };
+
+                    var setInputWithRecaptchaResponseTokenForRegistrationWithLead = function(id, token) {
+            var element = document.getElementById(id);
+            element.value = token;
+          }
+
+        </script>
+<input type="hidden" name="g-recaptcha-response-data[registration_with_lead]" id="g-recaptcha-response-data-registration-with-lead" data-sitekey="6LenGbgZAAAAAM7HbrDbn5JlizCSzPcS767c9vaY" class="g-recaptcha g-recaptcha-response "/>
+
+
+<div class='small text-muted lh-sm'>
+Отправляя форму, вы соглашаетесь c «<a href="/pages/privacy" class="text-muted text-decoration-none" target="_blank">Политикой конфиденциальности</a>» и «<a href="/pages/tos" class="text-muted text-decoration-none" target="_blank">Условиями оказания услуг</a>»
+</div>
+</div>
+</form></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class='container py-4 py-lg-5 my-md-4 my-xl-5'>
+<div class='row justify-content-center pb-4 pb-lg-5'>
+<div class='col-lg-10 text-center'>
+<img class="img-fluid" width="130" alt="" src="https://cdn2.hexlet.io/assets/hexlet_logo-e99fc2b3b7c1eec88899f3af1435a39aaac6fd29d011dfe2342499c0884b7a96.png" />
+<div class='h1 mb-4 mb-md-5'>Хекслет</div>
+<p class='h3 fw-light lh-base mb-0'>
+<strong class='fw-bold'>C 2012 года</strong>
+на рынке онлайн-образования. Около
+<strong class='fw-bold'>10&nbsp;000 человек</strong>
+обучаются на платформе ежемесячно. Более
+<strong class='fw-bold'>20&nbsp;000 человек</strong>
+<a target="_blank" rel="noopener" href="https://slack-ru.hexlet.io/">в Slack-сообществе Хекслета</a>
+—  это одно из самых больших комьюнити опытных и начинающих программистов в рунете.
+</p>
+</div>
+</div>
+</section>
+
+<div class='bg-hexlet-gray py-5'>
+<div class='container'>
+<section id='faq'>
+<div class='py-4'>
+<div class='display-4 mb-5 text-center'>
+<a class='text-dark text-decoration-none' href='#faq'>Вопросы и ответы</a>
+</div>
+<div class='row justify-content-center'>
+<div class='col-12 col-md-9'>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-0'>У меня получится?</a>
+</div>
+<div class='collapse' id='question-0'>
+<div class='pt-3 pb-1'>
+<p>Хотели бы сказать, что да, точно получится, но не можем — не всё зависит от нас. Не можем и пообещать, что учиться будет легко — изучать новое всегда трудно.</p>
+
+<p>Но мы точно знаем, что наши курсы подходят для новичков, а <a href="https://ru.hexlet.io/blog/categories/success" target="_blank">примеры наших выпускников</a> показывают, что можно с нуля освоить профессию программиста, найти работу и стать ценным специалистом. И, конечно, мы вам поможем.</p>
+
+<p>Так что попробовать точно стоит! А если сомневаетесь, просто оставьте заявку и пройдите несколько уроков из вводных курсов — сможете проверить и свой интерес к программированию, и качество наших материалов.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-1'>Чем вы отличаетесь от других школ?</a>
+</div>
+<div class='collapse' id='question-1'>
+<div class='pt-3 pb-1'>
+<p>Историей. Хекслет существует с 2012 года. Мы начинали, когда онлайн-образование еще не было столько популярным, и создали онлайн-тренажер, когда на EdTech вообще замахивались единицы. Сегодня Хекслет - это целое сообщество разработчиков.  Мы не просто учим, мы прививаем правильные инженерные практики и развиваем хорошую инженерную культуру.</p>
+
+<p>Экспертизой. Хекслет создается и развивается программистами, мы даем то, что знаем сами, в чем хорошо разбираемся. Программирование — наш единственный фокус.</p>
+
+<p>Отношением к трудоустройству. Мы не обещаем его как другие. При этом студенты Хекслета получают оффер еще во время обучения, а некоторые работодатели указывают курсы Хекслета как преимущество при найме. Как такое возможно? Просто в процессе обучения мы прорабатываем те моменты, которые не оставляют шансов остаться без работы: мощные проекты, Open Source для командной практики и масса образовательных вебинаров по развитию карьеры.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-2'>Сколько времени занимает учёба?</a>
+</div>
+<div class='collapse' id='question-2'>
+<div class='pt-3 pb-1'>
+<p>Мы рекомендуем выделять 10–15 часов в неделю, тогда получится закончить все курсы и выполнить все проекты в профессии за 8 месяцев.</p>
+
+<p>Конечно, это приблизительная оценка. Если у студента уже есть знания по программированию, получится справляться с задачами быстрее, а у новичков может уходить больше времени.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-3'>Как начать обучение?</a>
+</div>
+<div class='collapse' id='question-3'>
+<div class='pt-3 pb-1'>
+<p>Достаточно просто зарегистрироваться, сразу после регистрации вам будут доступны первые курсы профессии. Проходите их бесплатно, чтобы понять, как устроено обучение на Хекслете и подходит ли оно вам.</p>
+
+<p>Набор в группы открыт круглый год. Вы можете начать в любой день — просто оставьте заявку. После оплаты куратор добавит вас группу, где вы сможете общаться с другими студентами, задавать вопросы наставнику и участвовать в дополнительных мероприятиях.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-4'>Как проходит обучение?</a>
+</div>
+<div class='collapse' id='question-4'>
+<div class='pt-3 pb-1'>
+<p>Вы будете учиться в группе вместе с другими студентами.</p>
+
+<p>Часть материала — это курсы с адаптированной для новичков теорией, тестами на закрепление и большим количеством практических упражнений с автоматизированной проверкой прямо в браузере. Курсы каждый студент проходит самостоятельно, а если нужно, обращается за помощью к наставнику и одногруппникам.</p>
+
+<p>Еще одна часть обучения — мероприятия, которые проводит наставник: лекции, вебинары, слаконары, лайв-кодинг. Лучше присутствовать на них лично, чтобы сразу задать вопросы, но если не получается, не страшно — мы сохраняем все записи.</p>
+
+<p>А чтобы закрепить новые знания и получить опыт реальной разработки, за время обучения вы создадите настоящие приложения, которые станут частью вашего портфолио.</p>
+
+<p>Также вы можете учиться по готовым курсам и выполнять проекты самостоятельно или <a href="https://premium.hexlet.io/" target="_blank">вместе с наставником</a> в индивидуальном формате.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-5'>Кто такой наставник?</a>
+</div>
+<div class='collapse' id='question-5'>
+<div class='pt-3 pb-1'>
+<p>Каждый наставник — опытный программист, который добился успехов в профессии, а теперь делится знаниями и опытом со студентами Хекслета. Кандидаты проходят строгий отбор — наставником становится лишь каждый десятый, поэтому случайных людей у нас нет.</p>
+
+<p>Наставник отвечает на вопросы по курсам и проектам и в целом по выбранной профессии, а если возникнут трудности, он поддержит и поможет разобраться.</p>
+
+<p>Студенты общаются с наставником в закрытом Slack-чате группы, а также на регулярных групповых созвонах, вебинарах и сессиях лайв-кодинга.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-6'>Как оплатить?</a>
+</div>
+<div class='collapse' id='question-6'>
+<div class='pt-3 pb-1'>
+<p>Мы принимаем карты Visa и MasterCard любого банка, валюта счёта тоже может быть любой.</p>
+
+<p>Вы можете оплатить сразу весь срок обучения или платить помесячно. Помесячная оплата — это честная рассрочка от Хекслета, никаких банков, кредитов и процентов. Вы привязываете карту — мы списываем с неё деньги раз в месяц. Но если оплатить сразу, получится дешевле, так как мы дадим скидку.</p>
+
+</div>
+</div>
+</div>
+<div class='mb-4'>
+<div class='h3 fw-light mb-0'>
+<a class='text-decoration-none link-dark' data-bs-toggle='collapse' href='#question-7'>Могу ли я вернуть деньги, если что-то пойдёт не так?</a>
+</div>
+<div class='collapse' id='question-7'>
+<div class='pt-3 pb-1'>
+<p>Да, мы гарантируем возврат всей суммы в течение 14 дней с начала обучения.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+<section class='container-md mt-5 d-flex' id='free-start'>
+<a class="mx-auto text-decoration-none" href="/u/new?from=%2Fprograms%2Fphp"><img class="img-fluid" src="https://cdn2.hexlet.io/assets/cta_start_learning-0a9013193cd1ea91e6633e515b2729aef963711e2eebd92d909e87a93b566c88.png" />
+</a></section>
+
+
+
+</main>
+
+
+</body>
+</html>

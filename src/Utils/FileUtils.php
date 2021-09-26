@@ -4,12 +4,13 @@ declare(strict_types=1);
 
 namespace Hexlet\PageLoader\Utils;
 
-use RuntimeException;
+use Hexlet\PageLoader\Exceptions\IncorrectDirectoryException;
+use Hexlet\PageLoader\Exceptions\IncorrectFileException;
 
 class FileUtils
 {
     /**
-     * @throws RuntimeException
+     * @throws IncorrectDirectoryException
      */
     public static function create(string $dir, string $filename, mixed $content): string
     {
@@ -22,15 +23,18 @@ class FileUtils
             return $path;
         }
 
-        throw new RuntimeException("Incorrect directory {$dir}");
+        throw new IncorrectDirectoryException($dir);
     }
 
+    /**
+     * @throws IncorrectFileException
+     */
     public static function get(string $path): string
     {
         if (is_file($path) && $file = file_get_contents($path)) {
             return $file;
         }
 
-        throw new RuntimeException("Incorrect file {$path}");
+        throw new IncorrectFileException($path);
     }
 }

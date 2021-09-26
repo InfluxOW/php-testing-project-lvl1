@@ -6,59 +6,133 @@ namespace Hexlet\PageLoader;
 
 use DiDom\Document;
 use DiDom\Element;
+use Hexlet\PageLoader\Exceptions\IncorrectDirectoryException;
+use Hexlet\PageLoader\Exceptions\IncorrectUrlException;
 use Hexlet\PageLoader\Http\ClientInterface;
 use Hexlet\PageLoader\Utils\FileUtils;
+use Hexlet\PageLoader\Utils\StringUtils;
 use Hexlet\PageLoader\Utils\UrlUtils;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 use Psr\Http\Client\ClientExceptionInterface;
-use RuntimeException;
 
 class PageLoader
 {
+    private const ATTRIBUTES_BY_DOWNLOADABLE_TAG_NAME = [
+        'img' => 'src',
+        'script' => 'src',
+        'link' => 'href',
+        'picture > source' => 'srcset',
+    ];
+    private const FILES_DIRECTORY_POSTFIX = '_files';
+
     /**
-     * @param \Hexlet\PageLoader\Http\ClientInterface|string $client
-     * Workaround for Hexlet tests
-     *
-     * @throws ClientExceptionInterface | RuntimeException
+     * @throws IncorrectDirectoryException | IncorrectUrlException
      */
-    public static function download(string $url, string $rootDirectory, ClientInterface|string $client): string
+    public static function download(string $url, string $rootDirectory, ClientInterface $client): string
     {
-        if (is_string($client)) {
-            $client = new $client();
+        $url = UrlUtils::normalize($url);
+
+        try {
+            $content = $client->get($url)->getBody()->getContents();
+            $document = new Document($content);
+
+            self::downloadResources($document, $url, $rootDirectory, $client);
+        } catch (ClientExceptionInterface $e) {
+            throw new IncorrectUrlException($e->getMessage(), $e->getCode(), $e->getPrevious());
         }
-
-        $content = $client->get($url)->getBody()->getContents();
-        $document = new Document($content);
-
-        $rootUrl = UrlUtils::getRoot($url);
-        $filesDirectory = implode('/', [$rootDirectory, self::prepareFilename($url, '_files')]);
-        self::downloadImages($document, $rootUrl, $rootDirectory, $filesDirectory, $client);
 
         return FileUtils::create($rootDirectory, self::prepareFilename($url), $document->html());
     }
 
     private static function prepareFilename(string $url, ?string $postfix = '.html'): string
     {
-        $noSchemeUrl = preg_replace('/^http(s)?:\/\//', '', $url);
-        $noTrailingSlashUrl = preg_replace('/\/?$/', '', $noSchemeUrl ?? $url);
-        $filename = preg_replace('/[^a-zA-Z0-9]/', '-', $noTrailingSlashUrl ?? $url);
+        $path = parse_url($url, PHP_URL_PATH);
+        $extensionInfo = is_string($path) ? pathinfo($path, PATHINFO_EXTENSION) : null;
+        $extension = ($extensionInfo === '') ? null : $extensionInfo;
+        $postfix = ($extension === null) ? $postfix : ".{$extension}";
+
+        /** @var string $noExtensionUrl */
+        $noExtensionUrl = ($extension === null) ? $url : preg_replace("/\.{$extension}$/", '', $url);
+        /** @var string $noSchemeUrl */
+        $noSchemeUrl = preg_replace('/^http(s)?:\/\//', '', $noExtensionUrl);
+        $filename = preg_replace('/[^a-zA-Z0-9]/', '-', $noSchemeUrl);
+
         return "{$filename}{$postfix}";
     }
 
-    private static function downloadImages(Document $document, string $rootUrl, string $rootDirectory, string $directory, mixed $client): void
+    /**
+     * @throws IncorrectUrlException | IncorrectDirectoryException | ClientExceptionInterface
+     * @noinspection PhpDocMissingThrowsInspection
+     */
+    private static function downloadResources(Document $document, string $url, string $rootDirectory, ClientInterface $client): void
     {
-        collect($document->find('img'))->map(function (Element $element) use ($client, $directory, $rootUrl, $rootDirectory) {
-            $src = $element->getAttribute('src');
-            if (isset($src)) {
-                $src = str_starts_with('/', $src) ? "{$rootUrl}{$src}" : $src;
-                $content = $client->get($src)->getBody()->getContents();
-                $fileName = basename($src);
+        $rootUrl = UrlUtils::getRoot($url);
+        $filesDirectory = implode('/', [$rootDirectory, self::prepareFilename($url, self::FILES_DIRECTORY_POSTFIX)]);
 
-                $absolutePath = FileUtils::create($directory, $fileName, $content);
-                $relativePath = str_replace("{$rootDirectory}/", '', $absolutePath);
+        $downloadableAttributes = implode(',', array_keys(self::ATTRIBUTES_BY_DOWNLOADABLE_TAG_NAME));
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $tags = $document->find($downloadableAttributes);
 
-                $element->setAttribute('src', $relativePath);
-            }
-            return $element;
-        });
+        $getElementAttributeName = static function (Element $element): ?string {
+            return Arr::first(Arr::where(self::ATTRIBUTES_BY_DOWNLOADABLE_TAG_NAME, static fn (string $attribute, string $tag) => str_contains($tag, $element->tag)));
+        };
+
+        collect($tags)
+            ->filter(static function (Element $element) use ($getElementAttributeName) {
+                $attributeName = $getElementAttributeName($element);
+
+                return is_string($attributeName) && $element->hasAttribute($attributeName);
+            })
+            ->map(static function (Element $element) use ($getElementAttributeName, $rootUrl) {
+                /** @var string $attributeName */
+                $attributeName = $getElementAttributeName($element);
+                /** @var string $attributeUrl */
+                $attributeUrl = $element->getAttribute($attributeName);
+                $normalizedUrl = UrlUtils::normalize($attributeUrl, $rootUrl);
+
+                $element->setAttribute($attributeName, $normalizedUrl);
+
+                return $element;
+            })
+            ->filter(static function (Element $element) use ($getElementAttributeName, $rootUrl) {
+                /** @var string $attributeName */
+                $attributeName = $getElementAttributeName($element);
+                /** @var string $attributeUrl */
+                $attributeUrl = $element->getAttribute($attributeName);
+
+                /** @var string $rootUrlHost */
+                $rootUrlHost = parse_url($rootUrl, PHP_URL_HOST);
+                /** @var string $attributeUrlHost */
+                $attributeUrlHost = parse_url($attributeUrl, PHP_URL_HOST);
+                $commonDomain = StringUtils::longestCommonSubstring($rootUrlHost, $attributeUrlHost);
+
+                return isset($commonDomain) && str_ends_with($rootUrlHost, $commonDomain) && str_ends_with($attributeUrlHost, $commonDomain);
+            })
+            ->sortBy(static function (Element $element) use ($getElementAttributeName) {
+                /** @var string $attributeName */
+                $attributeName = $getElementAttributeName($element);
+
+                return $element->getAttribute($attributeName);
+            })
+            ->reduce(function (Collection $acc, Element $element) use ($client, $filesDirectory, $rootDirectory, $getElementAttributeName) {
+                /** @var string $attributeName */
+                $attributeName = $getElementAttributeName($element);
+                /** @var string $url */
+                $url = $element->getAttribute($attributeName);
+
+                if ($acc->has($url)) {
+                    $relativePath = $acc->get($url);
+                } else {
+                    $content = $client->get($url)->getBody()->getContents();
+
+                    $absolutePath = FileUtils::create($filesDirectory, self::prepareFilename($url), $content);
+                    $relativePath = str_replace("{$rootDirectory}/", '', $absolutePath);
+
+                    $element->setAttribute($attributeName, $relativePath);
+                }
+
+                return tap($acc, static fn (Collection $acc) => $acc->offsetSet($url, $relativePath));
+            }, collect());
     }
 }

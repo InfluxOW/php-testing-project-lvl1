@@ -16,9 +16,6 @@
         "test": "phpunit tests"
     },
     "autoload": {
-        "files": [
-            "downloader/Downloader.php"
-        ],
         "psr-4": {
             "Hexlet\\PageLoader\\": "src/"
         }
@@ -29,13 +26,14 @@
         }
     },
     "require-dev": {
-        "roave/security-advisories": "dev-latest",
-        "psy/psysh": "@stable",
-        "phpunit/phpunit": "^9.5",
-        "squizlabs/php_codesniffer": "^3.6",
+        "hexlet/phpstan-fp": "^1.1",
         "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan": "^0.12.98",
         "phpstan/phpstan-phpunit": "^0.12.22",
-        "phpstan/phpstan": "^0.12.98"
+        "phpunit/phpunit": "^9.5",
+        "psy/psysh": "@stable",
+        "roave/security-advisories": "dev-latest",
+        "squizlabs/php_codesniffer": "^3.6"
     },
     "require": {
         "php": "^8.0",
