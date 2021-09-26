@@ -5,11 +5,13 @@ declare(strict_types=1);
 namespace Hexlet\PageLoader;
 
 use Docopt;
+use Hexlet\PageLoader\Exceptions\BasePageLoaderException;
 use Hexlet\PageLoader\Http\Client;
 use GuzzleHttp\Client as GuzzleClient;
 
 final class Cli
 {
+    private const EXIT_GENERIC_ERROR = 1;
     private const HELP = <<<'DOC'
 
     Download HTML page
@@ -34,6 +36,13 @@ final class Cli
 
         $client = new Client(new GuzzleClient());
 
-        PageLoader::download($url, $dir, $client);
+        try {
+            $path = PageLoader::download($url, $dir, $client);
+        } catch (BasePageLoaderException $e) {
+            fwrite(STDERR, $e->prepareMessage() . PHP_EOL);
+            exit(self::EXIT_GENERIC_ERROR);
+        }
+
+        print_r("Page was successfully downloaded. See {$path}." . PHP_EOL);
     }
 }

@@ -38,8 +38,8 @@ class PageLoader
             $document = new Document($content);
 
             self::downloadResources($document, $url, $rootDirectory, $client);
-        } catch (ClientExceptionInterface $e) {
-            throw new IncorrectUrlException($e->getMessage(), $e->getCode(), $e->getPrevious());
+        } catch (ClientExceptionInterface) {
+            throw new IncorrectUrlException($url);
         }
 
         return FileUtils::create($rootDirectory, self::prepareFilename($url), $document->html());

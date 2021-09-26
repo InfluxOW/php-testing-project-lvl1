@@ -16,7 +16,7 @@ class FileUtils
     {
         @mkdir($dir);
 
-        if (is_dir($dir) || is_writable($dir)) {
+        if (is_dir($dir) && is_writable($dir)) {
             $path = "{$dir}/{$filename}";
             file_put_contents($path, $content);
 
