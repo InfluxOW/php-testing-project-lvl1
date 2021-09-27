@@ -18,4 +18,9 @@ class Client implements ClientInterface
     {
         return $this->client->get($uri, $options);
     }
+
+    public function request(string $method, $uri = '', array $options = []): ResponseInterface
+    {
+        return $this->client->request($method, $uri, $options);
+    }
 }

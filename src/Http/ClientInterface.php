@@ -14,4 +14,9 @@ interface ClientInterface
      * @throws ClientExceptionInterface
      */
     public function get(string|UriInterface $uri, array $options = []): ResponseInterface;
+
+    /**
+     * @throws ClientExceptionInterface
+     */
+    public function request(string $method, $uri = '', array $options = []): ResponseInterface;
 }

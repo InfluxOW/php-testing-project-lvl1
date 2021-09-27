@@ -41,6 +41,15 @@ class UrlUtils
             $fullUrl = vsprintf('%s://%s', [self::DEFAULT_SCHEME, $fullUrl]);
         }
 
+        if (is_string($rootUrl) && parse_url($rootUrl, PHP_URL_HOST) === parse_url($fullUrl, PHP_URL_HOST)) {
+            $rootUrlScheme = parse_url($rootUrl, PHP_URL_SCHEME);
+            /** @var string $fullUrlScheme */
+            $fullUrlScheme = parse_url($fullUrl, PHP_URL_SCHEME);
+            if (is_string($rootUrlScheme)) {
+                $fullUrl = str_replace($fullUrlScheme, $rootUrlScheme, $fullUrl);
+            }
+        }
+
         return trim($fullUrl, '/');
     }
 }

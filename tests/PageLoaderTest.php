@@ -22,10 +22,10 @@ use RuntimeException;
 class PageLoaderTest extends TestCase
 {
     private const TEMP_FILES_DIRECTORY = 'tmp';
-    private const TEST_SITE_URL = 'https://ru.hexlet.io/programs/php';
-    private const TEST_SITE_ORIGINAL = 'ru-hexlet-io-programs-php-original.html';
-    private const TEST_SITE_FIXTURE = 'ru-hexlet-io-programs-php.html';
-    private const TEST_SITE_FILES_DIRECTORY = 'ru-hexlet-io-programs-php_files';
+    private const TEST_SITE_URL = 'http://site.com/blog/about';
+    private const TEST_SITE_ORIGINAL = 'site-com-blog-about-original.html';
+    private const TEST_SITE_FIXTURE = 'site-com-blog-about.html';
+    private const TEST_SITE_FILES_DIRECTORY = 'site-com-blog-about_files';
 
     private string $path;
     private vfsStreamDirectory $directory;
@@ -53,17 +53,24 @@ class PageLoaderTest extends TestCase
         $this->assertTrue($this->directory->hasChild(self::TEST_SITE_FIXTURE));
         $this->assertTrue($this->directory->hasChild(self::TEST_SITE_FILES_DIRECTORY));
 
-        $this->assertFileEquals($this->getFixtureFullPath(self::TEST_SITE_FIXTURE), $this->directory->getChild(self::TEST_SITE_FIXTURE)->url());
+        $this->assertFileEquals(
+            $this->getFixtureFullPath(self::TEST_SITE_FIXTURE),
+            $this->directory->getChild(self::TEST_SITE_FIXTURE)->url()
+        );
 
         /** @var string[] $files */
         $files = scandir($this->directory->getChild(self::TEST_SITE_FILES_DIRECTORY)->url());
         $resources = array_values(array_diff($files, ['.', '..']));
-        collect($resources)->every(function (string $filename) {
-            $this->assertFileEquals(
-                $this->getFixtureFullPath(self::TEST_SITE_FILES_DIRECTORY, $filename),
-                $this->directory->getChild(self::TEST_SITE_FILES_DIRECTORY . '/' . $filename)->url()
-            );
-        });
+        collect($resources)
+            ->sortBy(function (string $filename): string {
+                return $filename;
+            })
+            ->every(function (string $filename): void {
+                $this->assertFileEquals(
+                    $this->getFixtureFullPath(self::TEST_SITE_FILES_DIRECTORY, $filename),
+                    $this->directory->getChild(self::TEST_SITE_FILES_DIRECTORY . '/' . $filename)->url()
+                );
+            });
     }
 
     public function testPageDownloadIncorrectDirectoryError(): void
@@ -100,7 +107,7 @@ class PageLoaderTest extends TestCase
         $parts = [__DIR__, 'fixtures', ...$fixturePath];
         $path = realpath(implode('/', $parts));
 
-        if ($path) {
+        if (is_string($path)) {
             return $path;
         }
 
@@ -129,10 +136,10 @@ class PageLoaderTest extends TestCase
         $files = scandir($this->getFixtureFullPath(self::TEST_SITE_FILES_DIRECTORY));
         $resources = array_values(array_diff($files, ['.', '..']));
         collect($resources)
-            ->sortBy(function (string $filename) {
+            ->sortBy(function (string $filename): string {
                 return $filename;
             })
-            ->each(function (string $filename) {
+            ->each(function (string $filename): void {
                 $this->addMockAnswer($this->getFixtureContent(self::TEST_SITE_FILES_DIRECTORY, $filename));
             });
     }

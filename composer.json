@@ -1,7 +1,7 @@
 {
     "name": "hexlet/code",
     "bin": [
-        "bin/php-package"
+        "bin/page-loader"
     ],
     "type": "project",
     "authors": [
@@ -16,6 +16,9 @@
         "test": "phpunit tests"
     },
     "autoload": {
+        "files": [
+            "downloader/Downloader.php"
+        ],
         "psr-4": {
             "Hexlet\\PageLoader\\": "src/"
         }
