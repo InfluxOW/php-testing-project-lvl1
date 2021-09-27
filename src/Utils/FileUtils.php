@@ -12,18 +12,18 @@ class FileUtils
     /**
      * @throws IncorrectDirectoryException
      */
-    public static function create(string $dir, string $filename, mixed $content): string
+    public static function create(string $dirpath, string $filename, mixed $content): string
     {
-        @mkdir($dir);
+        @mkdir($dirpath, 0777, true);
 
-        if (is_dir($dir) && is_writable($dir)) {
-            $path = "{$dir}/{$filename}";
+        if (is_dir($dirpath) && is_writable($dirpath)) {
+            $path = PathUtils::join($dirpath, $filename);
             file_put_contents($path, $content);
 
             return $path;
         }
 
-        throw new IncorrectDirectoryException($dir);
+        throw new IncorrectDirectoryException($dirpath);
     }
 
     /**
@@ -31,8 +31,12 @@ class FileUtils
      */
     public static function get(string $path): string
     {
-        if (is_file($path) && $file = file_get_contents($path)) {
-            return $file;
+        if (is_file($path)) {
+            $file = file_get_contents($path);
+
+            if (is_string($file)) {
+                return $file;
+            }
         }
 
         throw new IncorrectFileException($path);

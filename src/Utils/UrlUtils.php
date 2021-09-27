@@ -43,4 +43,20 @@ class UrlUtils
 
         return trim($fullUrl, '/');
     }
+
+    public static function toFilename(string $url, ?string $postfix = '.html'): string
+    {
+        $path = parse_url($url, PHP_URL_PATH);
+        $extensionInfo = is_string($path) ? pathinfo($path, PATHINFO_EXTENSION) : null;
+        $extension = empty($extensionInfo) ? null : $extensionInfo;
+        $postfix = ($extension === null) ? $postfix : ".{$extension}";
+
+        /** @var string $noExtensionUrl */
+        $noExtensionUrl = ($extension === null) ? $url : preg_replace("/\.{$extension}$/", '', $url);
+        /** @var string $noSchemeUrl */
+        $noSchemeUrl = preg_replace('/^http(s)?:\/\//', '', $noExtensionUrl);
+        $filename = preg_replace('/[^a-zA-Z0-9]/', '-', $noSchemeUrl);
+
+        return "{$filename}{$postfix}";
+    }
 }

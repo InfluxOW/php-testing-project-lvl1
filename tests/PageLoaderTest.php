@@ -14,6 +14,7 @@ use Hexlet\PageLoader\Http\Client;
 use Hexlet\PageLoader\Http\ClientInterface;
 use Hexlet\PageLoader\PageLoader;
 use Hexlet\PageLoader\Utils\FileUtils;
+use Hexlet\PageLoader\Utils\PathUtils;
 use org\bovigo\vfs\vfsStream;
 use org\bovigo\vfs\vfsStreamDirectory;
 use PHPUnit\Framework\TestCase;
@@ -53,13 +54,13 @@ class PageLoaderTest extends TestCase
         $this->assertTrue($this->directory->hasChild(self::TEST_SITE_FIXTURE));
         $this->assertTrue($this->directory->hasChild(self::TEST_SITE_FILES_DIRECTORY));
 
-        $this->assertFileEquals($this->getFixtureFullPath(self::TEST_SITE_FIXTURE), $this->directory->getChild(self::TEST_SITE_FIXTURE)->url());
+        $this->assertFileEqualsIgnoringNewLineCharacters($this->getFixtureFullPath(self::TEST_SITE_FIXTURE), $this->directory->getChild(self::TEST_SITE_FIXTURE)->url());
 
         /** @var string[] $files */
         $files = scandir($this->directory->getChild(self::TEST_SITE_FILES_DIRECTORY)->url());
         $resources = array_values(array_diff($files, ['.', '..']));
-        collect($resources)->every(function (string $filename) {
-            $this->assertFileEquals(
+        collect($resources)->every(function (string $filename): void {
+            $this->assertFileEqualsIgnoringNewLineCharacters(
                 $this->getFixtureFullPath(self::TEST_SITE_FILES_DIRECTORY, $filename),
                 $this->directory->getChild(self::TEST_SITE_FILES_DIRECTORY . '/' . $filename)->url()
             );
@@ -72,7 +73,7 @@ class PageLoaderTest extends TestCase
 
         $this->addMockAnswer('HTML');
 
-        PageLoader::download(self::TEST_SITE_URL, $this->path . '/wrong/directory', $this->client);
+        PageLoader::download(self::TEST_SITE_URL, '/wrong/directory', $this->client);
     }
 
     /**
@@ -93,12 +94,12 @@ class PageLoaderTest extends TestCase
     }
 
     /**
-     * @param string ...$fixturePath
+     * @param string ...$fixturePathParts
      */
-    private function getFixtureFullPath(...$fixturePath): string
+    private function getFixtureFullPath(...$fixturePathParts): string
     {
-        $parts = [__DIR__, 'fixtures', ...$fixturePath];
-        $path = realpath(implode('/', $parts));
+        $parts = PathUtils::join(__DIR__, 'fixtures', ...$fixturePathParts);
+        $path = realpath($parts);
 
         if ($path) {
             return $path;
@@ -108,11 +109,11 @@ class PageLoaderTest extends TestCase
     }
 
     /**
-     * @param string ...$fixturePath
+     * @param string ...$fixturePathParts
      */
-    private function getFixtureContent(...$fixturePath): string
+    private function getFixtureContent(...$fixturePathParts): string
     {
-        return FileUtils::get($this->getFixtureFullPath(...$fixturePath));
+        return FileUtils::get($this->getFixtureFullPath(...$fixturePathParts));
     }
 
     private function addMockAnswer(?string $content, int $responseCode = 200): void
@@ -129,11 +130,24 @@ class PageLoaderTest extends TestCase
         $files = scandir($this->getFixtureFullPath(self::TEST_SITE_FILES_DIRECTORY));
         $resources = array_values(array_diff($files, ['.', '..']));
         collect($resources)
-            ->sortBy(function (string $filename) {
+            ->sortBy(function (string $filename): string {
                 return $filename;
             })
-            ->each(function (string $filename) {
+            ->each(function (string $filename): void {
                 $this->addMockAnswer($this->getFixtureContent(self::TEST_SITE_FILES_DIRECTORY, $filename));
             });
+    }
+
+    private function assertFileEqualsIgnoringNewLineCharacters(string $first, string $second): void
+    {
+        $this->assertFileExists($first);
+        $this->assertFileExists($second);
+
+        $replaceNewLineCharactersWithEmptyString = static fn (string $string) => str_replace(PHP_EOL, '', $string);
+
+        $firstContent = $replaceNewLineCharactersWithEmptyString(FileUtils::get($first));
+        $secondContent = $replaceNewLineCharactersWithEmptyString(FileUtils::get($second));
+
+        $this->assertEquals($firstContent, $secondContent);
     }
 }

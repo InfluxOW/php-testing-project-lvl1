@@ -12,9 +12,6 @@
     ],
     "description": "Page Loader",
     "license": "MIT",
-    "scripts": {
-        "test": "phpunit tests"
-    },
     "autoload": {
         "psr-4": {
             "Hexlet\\PageLoader\\": "src/"
